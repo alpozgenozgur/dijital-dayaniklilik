@@ -10,6 +10,58 @@ locale: "tr"
 
 # Panel arayüzü Türkçe etiketlerle
 collections:
+  - name: "genel"
+    label: "Genel Ayarlar"
+    description: "Şu anki aşama ve iletişim bilgileri."
+    files:
+      - name: "site"
+        label: "Genel / İletişim"
+        file: "_data/site.json"
+        fields:
+          - { label: "Şu Anki Aşama (ana sayfa kutusu)", name: "asama_metin", widget: "markdown", hint: "Kalın yazmak için **metin** kullanın." }
+          - { label: "İletişim — E-posta", name: "iletisim_eposta", widget: "string", required: false }
+          - { label: "İletişim — Telefon", name: "iletisim_telefon", widget: "string", required: false }
+          - { label: "İletişim — Posta Adresi", name: "iletisim_adres", widget: "string", required: false }
+
+  - name: "ekip"
+    label: "Ekip"
+    description: "Yürütücü, danışman, araştırmacı ve bursiyerler."
+    files:
+      - name: "ekip"
+        label: "Ekip Listesi"
+        file: "_data/ekip.json"
+        fields:
+          - label: "Ekip Üyeleri"
+            name: "ekip"
+            widget: "list"
+            label_singular: "Üye"
+            summary: "{{fields.grup}} — {{fields.ad}}"
+            fields:
+              - { label: "Grup", name: "grup", widget: "select", options: ["Yürütücü", "Danışman", "Araştırmacı", "Bursiyer"] }
+              - { label: "Ad Soyad (unvanıyla)", name: "ad", widget: "string" }
+              - { label: "Görev/Unvan", name: "unvan", widget: "string", required: false, hint: "Örn: Danışman, Araştırmacı" }
+              - { label: "Kurum", name: "kurum", widget: "string", required: false, hint: "Boş bırakılırsa 'Kurum eklenecek' yazar." }
+              - { label: "Görev Notu", name: "gorev", widget: "string", required: false, hint: "Örn: Görevli: İP1 · İP2" }
+
+  - name: "etkinlikler"
+    label: "Etkinlikler"
+    description: "Süreç ve etkinlikler zaman çizelgesi."
+    files:
+      - name: "etkinlikler"
+        label: "Etkinlik Listesi"
+        file: "_data/etkinlikler.json"
+        fields:
+          - label: "Etkinlikler"
+            name: "etkinlikler"
+            widget: "list"
+            label_singular: "Etkinlik"
+            summary: "{{fields.etiket}} — {{fields.baslik}}"
+            fields:
+              - { label: "Tamamlandı mı?", name: "tamamlandi", widget: "boolean", default: false, hint: "İşaretlenirse nokta dolu (tamamlandı) görünür." }
+              - { label: "Etiket / Aşama", name: "etiket", widget: "string", hint: "Örn: Ön Çalışma, İP 1 · Devam ediyor, Planlanan" }
+              - { label: "Başlık", name: "baslik", widget: "string" }
+              - { label: "Açıklama", name: "aciklama", widget: "text", required: false }
+
   - name: "duyurular"
     label: "Duyurular"
     description: "Proje duyuruları. 'Duyurular' listesine yeni satır ekleyip kaydedin."
