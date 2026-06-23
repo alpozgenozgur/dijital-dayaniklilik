@@ -97,11 +97,15 @@ collections:
             label_singular: "Duyuru"
             summary: "{{fields.tarih}} — {{fields.baslik}}"
             fields:
-              - { label: "Başlık", name: "baslik", widget: "string" }
+              - { label: "Başlık (TR)", name: "baslik", widget: "string" }
               - { label: "Tarih", name: "tarih", widget: "date", format: "DD.MM.YYYY", date_format: "DD.MM.YYYY", time_format: false }
-              - { label: "Etiket", name: "etiket", widget: "string", required: false, default: "Duyuru", hint: "Örn: Duyuru, Etkinlik, Çalıştay" }
-              - { label: "Kısa Özet", name: "ozet", widget: "text", hint: "Kartta görünecek 1-2 cümle." }
-              - { label: "İçerik (detay)", name: "icerik", widget: "markdown", required: false, hint: "Tıklanınca açılacak tam metin. Boş bırakılırsa özet gösterilir." }
+              - { label: "Etiket (TR)", name: "etiket", widget: "string", required: false, default: "Duyuru", hint: "Örn: Duyuru, Etkinlik, Çalıştay" }
+              - { label: "Kısa Özet (TR)", name: "ozet", widget: "text", hint: "Kartta görünecek 1-2 cümle." }
+              - { label: "İçerik / detay (TR)", name: "icerik", widget: "markdown", required: false, hint: "Tıklanınca açılacak tam metin." }
+              - { label: "Title (EN)", name: "baslik_en", widget: "string", required: false, hint: "İngilizce başlık. Boş bırakılırsa İngilizce görünümde Türkçesi gösterilir." }
+              - { label: "Tag (EN)", name: "etiket_en", widget: "string", required: false }
+              - { label: "Summary (EN)", name: "ozet_en", widget: "text", required: false }
+              - { label: "Content / detail (EN)", name: "icerik_en", widget: "markdown", required: false }
 
   - name: "yazilar"
     label: "Yazılar"
@@ -118,8 +122,12 @@ collections:
             label_singular: "Yazı"
             summary: "{{fields.tarih}} — {{fields.baslik}}"
             fields:
-              - { label: "Başlık", name: "baslik", widget: "string" }
+              - { label: "Başlık (TR)", name: "baslik", widget: "string" }
               - { label: "Tarih", name: "tarih", widget: "date", format: "DD.MM.YYYY", date_format: "DD.MM.YYYY", time_format: false }
-              - { label: "Etiket", name: "etiket", widget: "string", required: false, default: "Yazı", hint: "Örn: Rehber, Bilgi Notu, Söyleşi" }
-              - { label: "Kısa Özet", name: "ozet", widget: "text" }
-              - { label: "İçerik (detay)", name: "icerik", widget: "markdown" }
+              - { label: "Etiket (TR)", name: "etiket", widget: "string", required: false, default: "Yazı", hint: "Örn: Rehber, Bilgi Notu, Söyleşi" }
+              - { label: "Kısa Özet (TR)", name: "ozet", widget: "text" }
+              - { label: "İçerik / detay (TR)", name: "icerik", widget: "markdown" }
+              - { label: "Title (EN)", name: "baslik_en", widget: "string", required: false, hint: "İngilizce başlık. Boş bırakılırsa İngilizce görünümde Türkçesi gösterilir." }
+              - { label: "Tag (EN)", name: "etiket_en", widget: "string", required: false }
+              - { label: "Summary (EN)", name: "ozet_en", widget: "text", required: false }
+              - { label: "Content / detail (EN)", name: "icerik_en", widget: "markdown", required: false }
