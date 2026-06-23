@@ -1,0 +1,22 @@
+{
+  "ekip": [
+    { "grup": "Yürütücü", "ad": "Doç. Dr. Aslıhan İstanbullu", "unvan": "Proje Yürütücüsü", "kurum": "Amasya Üniversitesi", "gorev": "Görevli: İP1 · İP2 · İP3 · İP4 · İP5" },
+
+    { "grup": "Danışman", "ad": "Prof. Dr. Mehmet Barış Horzum", "unvan": "Danışman", "kurum": "", "gorev": "Görevli: İP1 · İP2" },
+    { "grup": "Danışman", "ad": "Prof. Dr. Ömer Delialioğlu", "unvan": "Danışman", "kurum": "", "gorev": "Görevli: İP1 · İP5" },
+    { "grup": "Danışman", "ad": "Prof. Dr. Özcan Erkan Akgün", "unvan": "Danışman", "kurum": "", "gorev": "Görevli: İP1 · İP3" },
+    { "grup": "Danışman", "ad": "Tufan Babur", "unvan": "Danışman", "kurum": "", "gorev": "Görevli: İP1 · İP4" },
+
+    { "grup": "Araştırmacı", "ad": "Prof. Dr. Çelebi Uluyol", "unvan": "Araştırmacı", "kurum": "", "gorev": "Görevli: İP1 · İP4 · İP5" },
+    { "grup": "Araştırmacı", "ad": "Doç. Dr. Murat Topal", "unvan": "Araştırmacı", "kurum": "", "gorev": "Görevli: İP1 · İP2 · İP4 · İP5" },
+    { "grup": "Araştırmacı", "ad": "Dr. Öğr. Üyesi Şirin Küçük-Avcı", "unvan": "Araştırmacı", "kurum": "", "gorev": "Görevli: İP1 · İP2 · İP3 · İP4" },
+    { "grup": "Araştırmacı", "ad": "Öğr. Gör. Dr. Funda Alptekin", "unvan": "Araştırmacı", "kurum": "", "gorev": "Görevli: İP1 · İP4 · İP5" },
+    { "grup": "Araştırmacı", "ad": "Doç. Dr. Selma Şenel", "unvan": "Araştırmacı", "kurum": "", "gorev": "Görevli: İP2 · İP5" },
+    { "grup": "Araştırmacı", "ad": "Dr. Derya Selçuk-Köse", "unvan": "Araştırmacı", "kurum": "", "gorev": "Görevli: İP2" },
+    { "grup": "Araştırmacı", "ad": "Dr. Yucan Eke", "unvan": "Araştırmacı", "kurum": "", "gorev": "Görevli: İP2" },
+
+    { "grup": "Bursiyer", "ad": "Lisans Bursiyer(ler)i", "unvan": "TÜBİTAK 2209 · veri analizi & geliştirme", "kurum": "", "gorev": "" },
+    { "grup": "Bursiyer", "ad": "Yüksek Lisans Bursiyeri", "unvan": "Tez çalışması", "kurum": "", "gorev": "" },
+    { "grup": "Bursiyer", "ad": "Doktora Bursiyeri", "unvan": "Tez çalışması", "kurum": "", "gorev": "" }
+  ]
+}

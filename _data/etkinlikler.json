@@ -1,0 +1,8 @@
+{
+  "etkinlikler": [
+    { "tamamlandi": true, "etiket": "Ön Çalışma", "baslik": "Saha araştırması tamamlandı", "aciklama": "NIST çerçevesine dayalı görüşme formu, etik kurul ve MEB izinleriyle 1052 öğretmene uygulandı; NVivo analizi her basamakta önemli bilgi eksiklikleri olduğunu ortaya koydu." },
+    { "tamamlandi": true, "etiket": "Ön Çalışma", "baslik": "Eğitim içeriklerinin incelenmesi", "aciklama": "MEB, BTK, TÜBİTAK gibi kurumların 90 eğitim içeriği tarandı; bu eğitimlerin projedeki dört kavramı bir arada içermediği görüldü." },
+    { "tamamlandi": false, "etiket": "İP 1 · Devam ediyor", "baslik": "Dijital Dayanıklılık Modeli geliştiriliyor", "aciklama": "Sistematik literatür taraması ve Delphi uzman görüşü süreciyle modelin çerçevesi oluşturuluyor." },
+    { "tamamlandi": false, "etiket": "Planlanan", "baslik": "Çalıştay ve eğitimler", "aciklama": "RTDS kapsamında 120 öğretmenle çevrimiçi eğitim ve iki günlük workshoplar planlanıyor." }
+  ]
+}
