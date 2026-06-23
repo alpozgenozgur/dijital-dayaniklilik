@@ -49,14 +49,13 @@
   .menu>li>a{display:block;font-size:.85rem;color:var(--on-dark-muted);padding:10px 12px;border-radius:8px;transition:.18s;cursor:pointer;white-space:nowrap}
   .menu>li>a:hover,.menu>li>a.active{color:var(--on-dark);background:rgba(255,255,255,.06)}
   .menu .caret{font-size:.6rem;opacity:.7;margin-left:5px}
-  .dropdown{position:absolute;top:calc(100% + 6px);left:0;min-width:238px;background:var(--ink-2);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:8px;opacity:0;visibility:hidden;transform:translateY(8px);transition:.2s;box-shadow:0 22px 50px -20px rgba(0,0,0,.6)}
+  .dropdown{position:absolute;top:calc(100% + 6px);left:0;min-width:248px;background:var(--ink-2);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:8px;opacity:0;visibility:hidden;transform:translateY(8px);transition:.2s;box-shadow:0 22px 50px -20px rgba(0,0,0,.6)}
   .menu>li:hover .dropdown{opacity:1;visibility:visible;transform:none}
   .dropdown a{display:block;font-size:.84rem;color:var(--on-dark-muted);padding:9px 12px;border-radius:8px;transition:.15s;cursor:pointer}
   .dropdown a:hover{color:#fff;background:rgba(35,199,181,.12)}
   .lang{display:flex;gap:4px;align-items:center;font-family:var(--mono);font-size:.72rem;flex:none}
   .lang button{background:none;border:1px solid rgba(255,255,255,.18);color:var(--on-dark-muted);padding:4px 9px;border-radius:6px;cursor:pointer;font-family:inherit;font-size:inherit}
   .lang button.active{background:var(--teal);border-color:var(--teal);color:#04201c;font-weight:500}
-  .lang button[disabled]{opacity:.45;cursor:not-allowed}
   .nav-toggle{display:none;background:none;border:0;color:var(--on-dark);cursor:pointer;font-size:1.4rem}
 
   .page{display:none}
@@ -69,7 +68,7 @@
   .hero .wrap{position:relative}
   .hero-tag{display:inline-flex;align-items:center;gap:10px;margin-bottom:24px;border:1px solid rgba(255,255,255,.16);border-radius:100px;padding:7px 16px;font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;color:var(--on-dark-muted)}
   .hero-tag .dot{width:7px;height:7px;border-radius:50%;background:var(--teal-bright);box-shadow:0 0 0 4px rgba(35,199,181,.2)}
-  .hero h1{font-size:clamp(2.1rem,4.6vw,3.7rem);max-width:20ch;margin-bottom:24px;color:#fff}
+  .hero h1{font-size:clamp(2.1rem,4.6vw,3.7rem);max-width:22ch;margin-bottom:24px;color:#fff}
   .hero h1 .hl{color:var(--teal-bright);font-style:italic}
   .hero-lead{font-size:clamp(1.02rem,1.5vw,1.22rem);color:var(--on-dark);max-width:62ch;opacity:.92}
   .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
@@ -224,29 +223,29 @@
     <div class="brand" data-go="anasayfa"><span class="mark"></span><b>Dijital Dayanıklılık</b></div>
     <button class="nav-toggle" aria-label="Menü" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
     <ul class="menu" id="menu">
-      <li><a data-go="hakkinda">Proje Hakkında <span class="caret">▾</span></a>
+      <li><a data-go="hakkinda"><span data-en="About">Proje Hakkında</span> <span class="caret">▾</span></a>
         <div class="dropdown">
-          <a data-go="hakkinda">Amaç, Kapsam ve Özgün Değer</a>
-          <a data-go="cerceve">Kuramsal Çerçeve & Saha</a>
+          <a data-go="hakkinda" data-en="Aims, Scope &amp; Originality">Amaç, Kapsam ve Özgün Değer</a>
+          <a data-go="cerceve" data-en="Framework &amp; Field Study">Kuramsal Çerçeve &amp; Saha</a>
         </div></li>
-      <li><a data-go="yontem">Yöntem & İş Paketleri <span class="caret">▾</span></a>
+      <li><a data-go="yontem"><span data-en="Method &amp; Work Packages">Yöntem &amp; İş Paketleri</span> <span class="caret">▾</span></a>
         <div class="dropdown">
-          <a data-go="yontem">Araştırma Yöntemi</a>
-          <a data-go="ispaketleri">İş Paketleri</a>
+          <a data-go="yontem" data-en="Research Method">Araştırma Yöntemi</a>
+          <a data-go="ispaketleri" data-en="Work Packages">İş Paketleri</a>
         </div></li>
-      <li><a data-go="ekip">Ekip</a></li>
-      <li><a data-go="yayinlar">Çıktılar & Duyurular <span class="caret">▾</span></a>
+      <li><a data-go="ekip" data-en="Team">Ekip</a></li>
+      <li><a data-go="yayinlar"><span data-en="Outputs &amp; News">Çıktılar &amp; Duyurular</span> <span class="caret">▾</span></a>
         <div class="dropdown">
-          <a data-go="yayinlar">Yayınlar ve Çıktılar</a>
-          <a data-go="etkinlikler">Etkinlikler</a>
-          <a data-go="duyurular">Duyurular</a>
-          <a data-go="yazilar">Yazılar</a>
+          <a data-go="yayinlar" data-en="Publications &amp; Outputs">Yayınlar ve Çıktılar</a>
+          <a data-go="etkinlikler" data-en="Activities">Etkinlikler</a>
+          <a data-go="duyurular" data-en="Announcements">Duyurular</a>
+          <a data-go="yazilar" data-en="Articles">Yazılar</a>
         </div></li>
-      <li><a data-go="iletisim">İletişim</a></li>
+      <li><a data-go="iletisim" data-en="Contact">İletişim</a></li>
     </ul>
     <div class="lang">
-      <button class="active">TR</button>
-      <button disabled title="Yakında">EN</button>
+      <button data-lang="tr" class="active" onclick="applyLang('tr')">TR</button>
+      <button data-lang="en" onclick="applyLang('en')">EN</button>
     </div>
   </div>
 </header>
@@ -259,102 +258,102 @@
     <div class="hero-bg"></div><div class="hero-grid"></div>
     <div class="wrap">
       <span class="hero-tag"><span class="dot"></span> TÜBİTAK 1001 · Amasya Üniversitesi</span>
-      <h1>Sınıf öğretmenlerinin <span class="hl">dijital dayanıklılığını</span> güçlendirmek</h1>
-      <p class="hero-lead">Dijital dönüşümle artan siber tehditler karşısında öğretmenleri daha dirençli kılmak için risk temelli bir model, ölçme araçları ve senaryo tabanlı bir destek sistemi geliştiriyoruz.</p>
+      <h1 data-en="Strengthening the <span class='hl'>digital resilience</span> of primary school teachers">Sınıf öğretmenlerinin <span class="hl">dijital dayanıklılığını</span> güçlendirmek</h1>
+      <p class="hero-lead" data-en="To make teachers more resilient against the cyber threats rising with digital transformation, we are developing a risk-based model, measurement tools and a scenario-based support system.">Dijital dönüşümle artan siber tehditler karşısında öğretmenleri daha dirençli kılmak için risk temelli bir model, ölçme araçları ve senaryo tabanlı bir destek sistemi geliştiriyoruz.</p>
       <div class="hero-cta">
-        <a class="btn btn-primary" data-go="hakkinda">Projeyi tanıyın →</a>
-        <a class="btn btn-ghost" data-go="ispaketleri">İş paketleri</a>
+        <a class="btn btn-primary" data-go="hakkinda" data-en="Explore the project →">Projeyi tanıyın →</a>
+        <a class="btn btn-ghost" data-go="ispaketleri" data-en="Work packages">İş paketleri</a>
       </div>
     </div>
   </div>
   <div class="home-intro">
     <div class="wrap grid">
       <div>
-        <span class="eyebrow">Proje Hakkında</span>
-        <h2 style="margin-top:10px">Neden dijital dayanıklılık?</h2>
+        <span class="eyebrow" data-en="About the project">Proje Hakkında</span>
+        <h2 style="margin-top:10px" data-en="Why digital resilience?">Neden dijital dayanıklılık?</h2>
         <div class="prose">
-          <p>Siber güvenlik artık yalnızca teknolojik bir altyapı meselesi değil; stratejiyi, eğitimi ve farkındalığı da kapsayan disiplinler arası bir kavramdır. Bu zincirin en zayıf halkası insandır — özellikle de çocuklardır. Öğretmen ise hem kendisini hem öğrencilerini koruyabilecek en kritik aktördür.</p>
-          <p>Proje, bu farkındalıkla uluslararası çerçeveleri (NIST, CIS, DigiComp 2.2) Türkiye eğitim sistemine uyarlayan bir <strong>Dijital Dayanıklılık Modeli (DDM)</strong> ve buna dayalı, gerçek olaylardan üretilmiş senaryolarla çalışan bir <strong>Risk Temelli Destek Sistemi (RTDS)</strong> geliştirmeyi hedefler.</p>
+          <p data-en="Cybersecurity is no longer merely a matter of technological infrastructure; it is an interdisciplinary concept that also encompasses strategy, education and awareness. The weakest link in this chain is the human being — especially children. The teacher is the most critical actor who can protect both themselves and their students.">Siber güvenlik artık yalnızca teknolojik bir altyapı meselesi değil; stratejiyi, eğitimi ve farkındalığı da kapsayan disiplinler arası bir kavramdır. Bu zincirin en zayıf halkası insandır — özellikle de çocuklardır. Öğretmen ise hem kendisini hem öğrencilerini koruyabilecek en kritik aktördür.</p>
+          <p data-en="With this in mind, the project develops a <strong>Digital Resilience Model (DRM)</strong> that adapts international frameworks (NIST, CIS, DigiComp 2.2) to the Turkish education system, and a <strong>Risk-Based Support System (RBSS)</strong> built on it that runs on scenarios derived from real incidents.">Proje, bu farkındalıkla uluslararası çerçeveleri (NIST, CIS, DigiComp 2.2) Türkiye eğitim sistemine uyarlayan bir <strong>Dijital Dayanıklılık Modeli (DDM)</strong> ve buna dayalı, gerçek olaylardan üretilmiş senaryolarla çalışan bir <strong>Risk Temelli Destek Sistemi (RTDS)</strong> geliştirmeyi hedefler.</p>
         </div>
-        <a class="btn btn-primary" data-go="hakkinda" style="margin-top:24px">Devamını oku →</a>
+        <a class="btn btn-primary" data-go="hakkinda" style="margin-top:24px" data-en="Read more →">Devamını oku →</a>
       </div>
       <div>
-        <div class="scope"><h3>Şu anki aşama</h3><div id="asama-metin"><p>Proje <strong style="color:var(--ink)">İP&nbsp;1 — Dijital Dayanıklılık Modeli'nin (DDM) geliştirilmesi</strong> aşamasında ilerliyor.</p></div></div>
-        <div class="scope" style="margin-top:16px"><h3>Çıkış noktası</h3><p>Proje öncesinde 1052 öğretmenle yapılan saha araştırması, NIST'in her basamağında ciddi bilgi eksiklikleri olduğunu ortaya koydu.</p><a class="when" data-go="cerceve" style="cursor:pointer">Saha bulgularını gör →</a></div>
+        <div class="scope"><h3 data-en="Current stage">Şu anki aşama</h3><div id="asama-metin"><p data-en="The project is progressing in <strong style='color:var(--ink)'>WP 1 — development of the Digital Resilience Model (DRM)</strong>.">Proje <strong style="color:var(--ink)">İP&nbsp;1 — Dijital Dayanıklılık Modeli'nin (DDM) geliştirilmesi</strong> aşamasında ilerliyor.</p></div></div>
+        <div class="scope" style="margin-top:16px"><h3 data-en="Starting point">Çıkış noktası</h3><p data-en="A field study with 1052 teachers conducted before the project revealed serious knowledge gaps at every step of NIST.">Proje öncesinde 1052 öğretmenle yapılan saha araştırması, NIST'in her basamağında ciddi bilgi eksiklikleri olduğunu ortaya koydu.</p><a class="when" data-go="cerceve" style="cursor:pointer" data-en="See field findings →">Saha bulgularını gör →</a></div>
       </div>
     </div>
   </div>
   <div class="supporters section">
     <div class="wrap">
-      <div class="sup-title">Destekleyen ve İş Birliği Yapılan Kuruluşlar</div>
+      <div class="sup-title" data-en="Supporting and Collaborating Institutions">Destekleyen ve İş Birliği Yapılan Kuruluşlar</div>
       <div class="sup-row">
-        <div class="sup"><b>TÜBİTAK</b><span>1001 Programı</span></div>
-        <div class="sup"><b>Amasya Üniv.</b><span>Yürütücü kurum</span></div>
+        <div class="sup"><b>TÜBİTAK</b><span data-en="1001 Programme">1001 Programı</span></div>
+        <div class="sup"><b>Amasya Üniv.</b><span data-en="Host institution">Yürütücü kurum</span></div>
         <div class="sup"><b>MEB</b><span>Ankara İl MEM · Strateji Geliştirme</span></div>
-        <div class="sup"><b>BTK</b><span>Bilgi Tekn. ve İletişim Kurumu</span></div>
-        <div class="sup"><b>Labris Networks</b><span>Özel sektör</span></div>
+        <div class="sup"><b>BTK</b><span data-en="Information and Communication Technologies Authority">Bilgi Tekn. ve İletişim Kurumu</span></div>
+        <div class="sup"><b>Labris Networks</b><span data-en="Private sector">Özel sektör</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROJE HAKKINDA (birleşik) -->
+<!-- PROJE HAKKINDA -->
 <section class="page section" id="hakkinda">
   <div class="wrap">
-    <div class="section-head"><span class="eyebrow">Proje Hakkında</span><h2>Amaç, Kapsam ve Özgün Değer</h2></div>
-    <p class="lead-para">Projenin amacı, sınıf öğretmenlerinin <span class="u">dijital dayanıklılıklarını</span> ve <span class="u">dijital dayanıklılık özyeterliklerini</span> güçlendirmektir.</p>
+    <div class="section-head"><span class="eyebrow" data-en="About the project">Proje Hakkında</span><h2 data-en="Aims, Scope and Originality">Amaç, Kapsam ve Özgün Değer</h2></div>
+    <p class="lead-para" data-en="The aim of the project is to strengthen primary school teachers' <span class='u'>digital resilience</span> and <span class='u'>digital resilience self-efficacy</span>.">Projenin amacı, sınıf öğretmenlerinin <span class="u">dijital dayanıklılıklarını</span> ve <span class="u">dijital dayanıklılık özyeterliklerini</span> güçlendirmektir.</p>
     <div class="prose">
-      <p><strong>Projenin çıkış noktası,</strong> dijital dönüşümle birlikte artan siber tehditler karşısında öğretmenlerin dijital dayanıklılıklarının geliştirilmesine duyulan ihtiyaçtır. Siber güvenlik eylem planında da vurgulanan <strong>risk temelli yaklaşım</strong> temel alınarak, öğretmenlerin bu becerileri öğrencilerine de aktarabilmeleri amaçlanır.</p>
-      <p><strong>Hedef kitle:</strong> Sınıf öğretmenleridir. En zayıf halkanın çocuklar olduğu düşünüldüğünde, erken yaşta güvenlik eğitimi çocukların dijital güvenliği için kritik önemdedir.</p>
+      <p data-en="<strong>The starting point of the project</strong> is the need to develop teachers' digital resilience against the cyber threats rising with digital transformation. Building on the <strong>risk-based approach</strong> emphasised in the national cybersecurity action plan, teachers are also expected to transfer these skills to their students."><strong>Projenin çıkış noktası,</strong> dijital dönüşümle birlikte artan siber tehditler karşısında öğretmenlerin dijital dayanıklılıklarının geliştirilmesine duyulan ihtiyaçtır. Siber güvenlik eylem planında da vurgulanan <strong>risk temelli yaklaşım</strong> temel alınarak, öğretmenlerin bu becerileri öğrencilerine de aktarabilmeleri amaçlanır.</p>
+      <p data-en="<strong>Target audience:</strong> primary school teachers. Given that children are the weakest link, early-age security education is critical for children's digital safety."><strong>Hedef kitle:</strong> Sınıf öğretmenleridir. En zayıf halkanın çocuklar olduğu düşünüldüğünde, erken yaşta güvenlik eğitimi çocukların dijital güvenliği için kritik önemdedir.</p>
     </div>
 
-    <div class="subhead">Alt Amaçlar</div>
+    <div class="subhead" data-en="Sub-objectives">Alt Amaçlar</div>
     <div class="aims">
-      <div class="aim"><span class="ix">İP1</span><p>Öğretmenler için bir Dijital Dayanıklılık Modeli (DDM) geliştirmek.</p></div>
-      <div class="aim"><span class="ix">İP2</span><p>Modele uygun, geçerli ve güvenilir veri toplama araçları geliştirmek.</p></div>
-      <div class="aim"><span class="ix">İP3</span><p>Öğretmenlerin mevcut dayanıklılık ve özyeterlik durumunu analiz etmek.</p></div>
-      <div class="aim"><span class="ix">İP4</span><p>Risk Temelli Destek Sistemini (RTDS) geliştirmek.</p></div>
-      <div class="aim"><span class="ix">İP5</span><p>Geliştirilen destek sistemini değerlendirmek.</p></div>
-      <div class="aim"><span class="ix">+</span><p>Becerilerin ders entegrasyonuyla öğrencilere aktarılmasını sağlamak.</p></div>
+      <div class="aim"><span class="ix">İP1</span><p data-en="Develop a Digital Resilience Model (DRM) for teachers.">Öğretmenler için bir Dijital Dayanıklılık Modeli (DDM) geliştirmek.</p></div>
+      <div class="aim"><span class="ix">İP2</span><p data-en="Develop valid and reliable data collection tools aligned with the model.">Modele uygun, geçerli ve güvenilir veri toplama araçları geliştirmek.</p></div>
+      <div class="aim"><span class="ix">İP3</span><p data-en="Analyse teachers' current resilience and self-efficacy levels.">Öğretmenlerin mevcut dayanıklılık ve özyeterlik durumunu analiz etmek.</p></div>
+      <div class="aim"><span class="ix">İP4</span><p data-en="Develop the Risk-Based Support System (RBSS).">Risk Temelli Destek Sistemini (RTDS) geliştirmek.</p></div>
+      <div class="aim"><span class="ix">İP5</span><p data-en="Evaluate the support system developed.">Geliştirilen destek sistemini değerlendirmek.</p></div>
+      <div class="aim"><span class="ix">+</span><p data-en="Enable the transfer of these skills to students through curriculum integration.">Becerilerin ders entegrasyonuyla öğrencilere aktarılmasını sağlamak.</p></div>
     </div>
 
-    <div class="subhead">Kapsam</div>
+    <div class="subhead" data-en="Scope">Kapsam</div>
     <div class="scope-grid">
-      <div class="scope"><h3>Hedef Kitle</h3><p>Türkiye genelindeki sınıf öğretmenleri. Mevcut durum analizinde en az 2000 öğretmene ulaşılması hedeflenir.</p></div>
-      <div class="scope"><h3>Proje İçeriği</h3><ul><li>Dijital Dayanıklılık Modeli (DDM)</li><li>Ölçme araçları (DDBGF & DDÖÖ)</li><li>Mevcut durum analizi</li><li>Risk Temelli Destek Sistemi (RTDS)</li></ul></div>
-      <div class="scope"><h3>Metodoloji</h3><ul><li>Keşfedici sıralı karma desen</li><li>Delphi tekniği & NVivo analizi</li><li>ADDIE öğretim tasarımı modeli</li><li>Senaryo tabanlı öğrenme (Moodle)</li></ul></div>
+      <div class="scope"><h3 data-en="Target audience">Hedef Kitle</h3><p data-en="Primary school teachers across Turkey. The current-state analysis aims to reach at least 2000 teachers.">Türkiye genelindeki sınıf öğretmenleri. Mevcut durum analizinde en az 2000 öğretmene ulaşılması hedeflenir.</p></div>
+      <div class="scope"><h3 data-en="Project content">Proje İçeriği</h3><ul><li data-en="Digital Resilience Model (DRM)">Dijital Dayanıklılık Modeli (DDM)</li><li data-en="Measurement tools (DRIF &amp; DRSS)">Ölçme araçları (DDBGF &amp; DDÖÖ)</li><li data-en="Current-state analysis">Mevcut durum analizi</li><li data-en="Risk-Based Support System (RBSS)">Risk Temelli Destek Sistemi (RTDS)</li></ul></div>
+      <div class="scope"><h3 data-en="Methodology">Metodoloji</h3><ul><li data-en="Exploratory sequential mixed design">Keşfedici sıralı karma desen</li><li data-en="Delphi technique &amp; NVivo analysis">Delphi tekniği &amp; NVivo analizi</li><li data-en="ADDIE instructional design model">ADDIE öğretim tasarımı modeli</li><li data-en="Scenario-based learning (Moodle)">Senaryo tabanlı öğrenme (Moodle)</li></ul></div>
     </div>
 
-    <div class="subhead">Özgün Değer</div>
+    <div class="subhead" data-en="Originality">Özgün Değer</div>
     <div class="prose">
-      <p><strong>Kuramsal özgünlük:</strong> Geliştirilecek model, ülkemizin güncel Siber Güvenlik Eylem Planı ile NIST/CIS ve DigiComp 2.2 çerçeveleri dikkate alınarak hazırlanır; öğretmenler için dijital risklerle başa çıkma yeterliklerine odaklanan yeni bir kavramsal çerçeve sunar.</p>
-      <p><strong>Metodolojik özgünlük:</strong> Mevcut dijital eğitim yaklaşımlarından farklı olarak risk temelli bir model üzerine inşa edilir; eğitim programı gerçek olaylardan üretilen senaryolarla tasarlanır ve Moodle üzerinde geliştirilir.</p>
-      <p><strong>İş birliği gücü:</strong> Farklı üniversiteler, özel sektör (Labris Networks) ve kamu (Ankara İl MEM, BTK) paydaşlarıyla kurulan iş birlikleri projenin çok yönlü ve sürdürülebilir olmasını sağlar.</p>
+      <p data-en="<strong>Theoretical originality:</strong> the model is built considering Turkey's current cybersecurity action plan together with the NIST/CIS and DigiComp 2.2 frameworks, offering a new conceptual framework focused on teachers' competencies for coping with digital risks."><strong>Kuramsal özgünlük:</strong> Geliştirilecek model, ülkemizin güncel Siber Güvenlik Eylem Planı ile NIST/CIS ve DigiComp 2.2 çerçeveleri dikkate alınarak hazırlanır; öğretmenler için dijital risklerle başa çıkma yeterliklerine odaklanan yeni bir kavramsal çerçeve sunar.</p>
+      <p data-en="<strong>Methodological originality:</strong> unlike existing digital education approaches, it is built on a risk-based model; the training programme is designed with scenarios derived from real incidents and developed on Moodle."><strong>Metodolojik özgünlük:</strong> Mevcut dijital eğitim yaklaşımlarından farklı olarak risk temelli bir model üzerine inşa edilir; eğitim programı gerçek olaylardan üretilen senaryolarla tasarlanır ve Moodle üzerinde geliştirilir.</p>
+      <p data-en="<strong>Strength of collaboration:</strong> partnerships with various universities, the private sector (Labris Networks) and public institutions (Ankara Provincial Directorate of National Education, BTK) make the project multifaceted and sustainable."><strong>İş birliği gücü:</strong> Farklı üniversiteler, özel sektör (Labris Networks) ve kamu (Ankara İl MEM, BTK) paydaşlarıyla kurulan iş birlikleri projenin çok yönlü ve sürdürülebilir olmasını sağlar.</p>
     </div>
 
-    <div class="subhead">Beklenen Etkiler</div>
+    <div class="subhead" data-en="Expected Impact">Beklenen Etkiler</div>
     <div class="aims">
-      <div class="aim"><span class="ix">01</span><p>Sınıf öğretmenlerinin dijital dayanıklılık ve özyeterliklerinin güçlenmesi.</p></div>
-      <div class="aim"><span class="ix">02</span><p>Becerilerin ders entegrasyonuyla öğrencilere aktarılması; çocukların daha güvenli bir dijital ortamda yetişmesi.</p></div>
-      <div class="aim"><span class="ix">03</span><p>Eğitimde dijital güvenlik alanına model, ölçek ve yayınlarla bilimsel katkı.</p></div>
-      <div class="aim"><span class="ix">04</span><p>Açık kaynak (Moodle tabanlı) ve sürdürülebilir bir destek sisteminin (RTDS) kalması.</p></div>
-      <div class="aim"><span class="ix">05</span><p>Akademi–kamu–özel sektör iş birliğinin güçlenmesi ve politikalara veri sağlanması.</p></div>
+      <div class="aim"><span class="ix">01</span><p data-en="Strengthening teachers' digital resilience and self-efficacy.">Sınıf öğretmenlerinin dijital dayanıklılık ve özyeterliklerinin güçlenmesi.</p></div>
+      <div class="aim"><span class="ix">02</span><p data-en="Transfer of these skills to students through curriculum integration; children growing up in a safer digital environment.">Becerilerin ders entegrasyonuyla öğrencilere aktarılması; çocukların daha güvenli bir dijital ortamda yetişmesi.</p></div>
+      <div class="aim"><span class="ix">03</span><p data-en="Scientific contribution to digital safety in education through a model, scale and publications.">Eğitimde dijital güvenlik alanına model, ölçek ve yayınlarla bilimsel katkı.</p></div>
+      <div class="aim"><span class="ix">04</span><p data-en="An open-source (Moodle-based) and sustainable support system (RBSS) remaining in use.">Açık kaynak (Moodle tabanlı) ve sürdürülebilir bir destek sisteminin (RTDS) kalması.</p></div>
+      <div class="aim"><span class="ix">05</span><p data-en="Strengthening academia–public–private collaboration and providing data for policy.">Akademi–kamu–özel sektör iş birliğinin güçlenmesi ve politikalara veri sağlanması.</p></div>
     </div>
 
-    <div class="subhead">Araştırma Soruları</div>
+    <div class="subhead" data-en="Research Questions">Araştırma Soruları</div>
     <ul class="rq">
-      <li>Dijital dayanıklılık bileşenleri nelerdir?</li>
-      <li>Öğretmenlerin karşılaşabileceği en yaygın dijital güvenlik riskleri nelerdir?</li>
-      <li>Öğretmenlerin bu risklerle başa çıkma stratejileri nelerdir?</li>
-      <li>Risklerle başa çıkmak için sahip olunması gereken bilgi ve beceriler nelerdir?</li>
-      <li>Başa çıkma stratejileri hangi dayanıklılık becerilerini geliştirir?</li>
-      <li>Dayanıklılığı güçlendirecek eğitim programı içerikleri nelerdir?</li>
-      <li>Öğretmenlerin dijital dayanıklılıkları ne düzeydedir?</li>
-      <li>Öğretmenlerin dijital dayanıklılık özyeterlikleri ne düzeydedir?</li>
-      <li>Senaryo tabanlı öğrenme dayanıklılığa nasıl katkı sağlar?</li>
-      <li>RTDS eğitimlerinin dayanıklılığı artırmadaki etkililiği nedir?</li>
-      <li>RTDS eğitimlerinin özyeterliği artırmadaki etkililiği nedir?</li>
-      <li>Ders entegrasyonuyla öğrencilerin dayanıklılığını geliştirme becerisi nasıl değişir?</li>
+      <li data-en="What are the components of digital resilience?">Dijital dayanıklılık bileşenleri nelerdir?</li>
+      <li data-en="What are the most common digital security risks teachers may face?">Öğretmenlerin karşılaşabileceği en yaygın dijital güvenlik riskleri nelerdir?</li>
+      <li data-en="What are teachers' strategies for coping with these risks?">Öğretmenlerin bu risklerle başa çıkma stratejileri nelerdir?</li>
+      <li data-en="What knowledge and skills are needed to cope with the risks?">Risklerle başa çıkmak için sahip olunması gereken bilgi ve beceriler nelerdir?</li>
+      <li data-en="Which resilience skills do coping strategies develop?">Başa çıkma stratejileri hangi dayanıklılık becerilerini geliştirir?</li>
+      <li data-en="What should the contents of a resilience-strengthening training programme be?">Dayanıklılığı güçlendirecek eğitim programı içerikleri nelerdir?</li>
+      <li data-en="What is the level of teachers' digital resilience?">Öğretmenlerin dijital dayanıklılıkları ne düzeydedir?</li>
+      <li data-en="What is the level of teachers' digital resilience self-efficacy?">Öğretmenlerin dijital dayanıklılık özyeterlikleri ne düzeydedir?</li>
+      <li data-en="How does scenario-based learning contribute to resilience?">Senaryo tabanlı öğrenme dayanıklılığa nasıl katkı sağlar?</li>
+      <li data-en="How effective are RBSS trainings in increasing resilience?">RTDS eğitimlerinin dayanıklılığı artırmadaki etkililiği nedir?</li>
+      <li data-en="How effective are RBSS trainings in increasing self-efficacy?">RTDS eğitimlerinin özyeterliği artırmadaki etkililiği nedir?</li>
+      <li data-en="How does the ability to develop students' resilience through curriculum integration change?">Ders entegrasyonuyla öğrencilerin dayanıklılığını geliştirme becerisi nasıl değişir?</li>
     </ul>
   </div>
 </section>
@@ -362,29 +361,29 @@
 <!-- KURAMSAL ÇERÇEVE + SAHA -->
 <section class="page section" id="cerceve">
   <div class="wrap">
-    <div class="section-head"><span class="eyebrow">Proje Hakkında</span><h2>Kuramsal Çerçeve — ANKA Modeli</h2><p>NIST Siber Güvenlik Çerçevesi'nin beş işlevi, öğretmenlere uygun olacak şekilde uyarlanarak proje modelinin (ANKA) iskeletini oluşturur.</p></div>
+    <div class="section-head"><span class="eyebrow" data-en="About the project">Proje Hakkında</span><h2 data-en="Theoretical Framework — the ANKA Model">Kuramsal Çerçeve — ANKA Modeli</h2><p data-en="The five functions of the NIST Cybersecurity Framework are adapted to suit teachers and form the backbone of the project model (ANKA).">NIST Siber Güvenlik Çerçevesi'nin beş işlevi, öğretmenlere uygun olacak şekilde uyarlanarak proje modelinin (ANKA) iskeletini oluşturur.</p></div>
     <div class="anka">
-      <div class="step"><span class="num">01</span><h3>Tanımla</h3><p>Tehditleri ve saldırı belirtilerini fark etme yetkinliği.</p><span class="en">Identify</span></div>
-      <div class="step"><span class="num">02</span><h3>Koru</h3><p>Kötü amaçlı yazılımlara karşı önceden önlem alma.</p><span class="en">Protect</span></div>
-      <div class="step"><span class="num">03</span><h3>Tespit Et</h3><p>İhlal ve saldırıları erken aşamada saptama.</p><span class="en">Detect</span></div>
-      <div class="step"><span class="num">04</span><h3>Müdahale Et</h3><p>Olay anında hızlı ve etkili karşılık verme.</p><span class="en">Respond</span></div>
-      <div class="step"><span class="num">05</span><h3>Kurtar</h3><p>Saldırı sonrası sistem ve verileri toparlama.</p><span class="en">Recover</span></div>
+      <div class="step"><span class="num">01</span><h3 data-en="Identify">Tanımla</h3><p data-en="Recognising threats and signs of attack.">Tehditleri ve saldırı belirtilerini fark etme yetkinliği.</p><span class="en">Identify</span></div>
+      <div class="step"><span class="num">02</span><h3 data-en="Protect">Koru</h3><p data-en="Taking precautions in advance against malware.">Kötü amaçlı yazılımlara karşı önceden önlem alma.</p><span class="en">Protect</span></div>
+      <div class="step"><span class="num">03</span><h3 data-en="Detect">Tespit Et</h3><p data-en="Detecting breaches and attacks at an early stage.">İhlal ve saldırıları erken aşamada saptama.</p><span class="en">Detect</span></div>
+      <div class="step"><span class="num">04</span><h3 data-en="Respond">Müdahale Et</h3><p data-en="Responding quickly and effectively during an incident.">Olay anında hızlı ve etkili karşılık verme.</p><span class="en">Respond</span></div>
+      <div class="step"><span class="num">05</span><h3 data-en="Recover">Kurtar</h3><p data-en="Recovering systems and data after an attack.">Saldırı sonrası sistem ve verileri toparlama.</p><span class="en">Recover</span></div>
     </div>
     <div class="prose">
-      <p>NIST (National Institute of Standards and Technology), siber güvenlik ve dijital dayanıklılık alanında uluslararası kabul gören çerçeveler geliştiren bir kurumdur. Bu beş bileşen, proje ekibi tarafından sınıf öğretmenlerine uygun olacak şekilde revize edilmiş ve projede <strong>ANKA modeli</strong> olarak ele alınmıştır.</p>
+      <p data-en="NIST (National Institute of Standards and Technology) develops internationally recognised frameworks in cybersecurity and digital resilience. These five components were revised by the project team to suit primary school teachers and are addressed in the project as the <strong>ANKA model</strong>.">NIST (National Institute of Standards and Technology), siber güvenlik ve dijital dayanıklılık alanında uluslararası kabul gören çerçeveler geliştiren bir kurumdur. Bu beş bileşen, proje ekibi tarafından sınıf öğretmenlerine uygun olacak şekilde revize edilmiş ve projede <strong>ANKA modeli</strong> olarak ele alınmıştır.</p>
     </div>
-    <div class="chips"><span class="chip">NIST CSF</span><span class="chip">CIS Controls</span><span class="chip">DigiComp 2.2</span><span class="chip">Risk Temelli Yaklaşım</span><span class="chip">Senaryo Tabanlı Öğrenme</span><span class="chip">ADDIE</span></div>
+    <div class="chips"><span class="chip">NIST CSF</span><span class="chip">CIS Controls</span><span class="chip">DigiComp 2.2</span><span class="chip" data-en="Risk-Based Approach">Risk Temelli Yaklaşım</span><span class="chip" data-en="Scenario-Based Learning">Senaryo Tabanlı Öğrenme</span><span class="chip">ADDIE</span></div>
 
-    <div class="subhead">Ön Çalışma / Saha Araştırması</div>
+    <div class="subhead" data-en="Preliminary Work / Field Study">Ön Çalışma / Saha Araştırması</div>
     <div class="findings">
-      <div class="finding"><div class="n">1052</div><div class="l">Katılımcı öğretmen</div></div>
-      <div class="finding"><div class="n">704 / 348</div><div class="l">Kadın / Erkek</div></div>
-      <div class="finding"><div class="n">5/5</div><div class="l">NIST basamağında eksiklik</div></div>
-      <div class="finding"><div class="n">90</div><div class="l">İncelenen eğitim içeriği</div></div>
+      <div class="finding"><div class="n">1052</div><div class="l" data-en="Participating teachers">Katılımcı öğretmen</div></div>
+      <div class="finding"><div class="n">704 / 348</div><div class="l" data-en="Female / Male">Kadın / Erkek</div></div>
+      <div class="finding"><div class="n">5/5</div><div class="l" data-en="NIST steps with gaps">NIST basamağında eksiklik</div></div>
+      <div class="finding"><div class="n">90</div><div class="l" data-en="Training contents reviewed">İncelenen eğitim içeriği</div></div>
     </div>
     <div class="prose">
-      <p>Proje öncesinde, NIST çerçevesine dayalı bir görüşme formu geliştirildi; etik kurul ve MEB izinleriyle MEB Strateji Geliştirme birimi üzerinden çevrimiçi uygulandı ve NVivo ile analiz edildi. Bulgular, NIST'in <strong>her bir adımında</strong> (Tanımla, Koru, Tespit Et, Müdahale Et, Kurtar) önemli bilgi eksiklikleri olduğunu gösterdi.</p>
-      <p>Ayrıca MEB, BTK, TÜBİTAK gibi kurumların <strong>90 eğitim içeriği</strong> incelendi. Bu eğitimler faydalı olmakla birlikte, projenin vurguladığı "dijital dayanıklılık + özyeterlik + risk temelli yaklaşım + ders entegrasyonu" kavramlarını bir arada içermiyordu. Bu boşluk, projenin gerekçesini oluşturur.</p>
+      <p data-en="Before the project, an interview form based on the NIST framework was developed; with ethics board and Ministry of Education approval it was administered online via the Ministry's Strategy Development unit and analysed with NVivo. The findings showed significant knowledge gaps at <strong>every step</strong> of NIST (Identify, Protect, Detect, Respond, Recover).">Proje öncesinde, NIST çerçevesine dayalı bir görüşme formu geliştirildi; etik kurul ve MEB izinleriyle MEB Strateji Geliştirme birimi üzerinden çevrimiçi uygulandı ve NVivo ile analiz edildi. Bulgular, NIST'in <strong>her bir adımında</strong> (Tanımla, Koru, Tespit Et, Müdahale Et, Kurtar) önemli bilgi eksiklikleri olduğunu gösterdi.</p>
+      <p data-en="In addition, <strong>90 training contents</strong> from institutions such as the Ministry of Education, BTK and TÜBİTAK were reviewed. Although useful, they did not contain the project's emphasis on 'digital resilience + self-efficacy + risk-based approach + curriculum integration' together. This gap forms the rationale of the project.">Ayrıca MEB, BTK, TÜBİTAK gibi kurumların <strong>90 eğitim içeriği</strong> incelendi. Bu eğitimler faydalı olmakla birlikte, projenin vurguladığı "dijital dayanıklılık + özyeterlik + risk temelli yaklaşım + ders entegrasyonu" kavramlarını bir arada içermiyordu. Bu boşluk, projenin gerekçesini oluşturur.</p>
     </div>
   </div>
 </section>
@@ -392,90 +391,90 @@
 <!-- YÖNTEM -->
 <section class="page section" id="yontem">
   <div class="wrap">
-    <div class="section-head"><span class="eyebrow">Yöntem</span><h2>Araştırma Yöntemi</h2><p>İlk üç iş paketinde karma araştırma yöntemi, dördüncü ve beşinci pakette öğretim tasarımı ve deneysel desen kullanılır.</p></div>
-    <p class="lead-para">Projede karma desenlerden <span class="u">keşfedici sıralı karma desen</span> kullanılır.</p>
-    <div class="prose"><p>Bu desende önce nitel veriler toplanıp analiz edilerek bilinmeyen bir özellik keşfedilir; ardından nicel ölçme araçlarıyla bu özelliğin yaygınlığı ortaya konur (Creswell, 2014).</p></div>
+    <div class="section-head"><span class="eyebrow" data-en="Method">Yöntem</span><h2 data-en="Research Method">Araştırma Yöntemi</h2><p data-en="The first three work packages use a mixed-methods design; the fourth and fifth use instructional design and an experimental design.">İlk üç iş paketinde karma araştırma yöntemi, dördüncü ve beşinci pakette öğretim tasarımı ve deneysel desen kullanılır.</p></div>
+    <p class="lead-para" data-en="The project uses the <span class='u'>exploratory sequential mixed design</span>.">Projede karma desenlerden <span class="u">keşfedici sıralı karma desen</span> kullanılır.</p>
+    <div class="prose"><p data-en="In this design, qualitative data are first collected and analysed to discover an unknown feature; then its prevalence is established with quantitative measurement tools (Creswell, 2014).">Bu desende önce nitel veriler toplanıp analiz edilerek bilinmeyen bir özellik keşfedilir; ardından nicel ölçme araçlarıyla bu özelliğin yaygınlığı ortaya konur (Creswell, 2014).</p></div>
 
-    <div class="mblock"><h4>DDM Geliştirme — 3 Aşama</h4><p>Model geliştirme süreci <strong>Hazırlık</strong> (kaynak incelemesi, sistematik tarama), <strong>Uygulama</strong> (Delphi ile uzman görüşü) ve <strong>Analiz</strong> aşamalarından oluşur.</p></div>
-    <div class="mblock"><h4>Delphi Tekniği</h4><p>Eğitim ortamındaki dijital riskleri belirlemek için 10–15 uzmandan görüş alınır; görüşler NVivo ile kodlanır, uzlaşma sağlanana dek süreç en az 3 tur tekrarlanır (çeyrekler genişliği ≤1, katılım ≥%90, medyan ≥4).</p></div>
-    <div class="mblock"><h4>Ölçme Araçları (DDBGF & DDÖÖ)</h4><p>Görüşme formu ve 5'li Likert özyeterlik ölçeği ANKA basamaklarına göre yapılandırılır. Kapsam geçerliği için CVI ≥ .80, güvenirlik için Cronbach's Alpha ≥ .70 ölçütleri esas alınır; yapı geçerliği için AFA/DFA yapılır.</p></div>
+    <div class="mblock"><h4 data-en="DRM Development — 3 Phases">DDM Geliştirme — 3 Aşama</h4><p data-en="The model development process consists of <strong>Preparation</strong> (source review, systematic review), <strong>Implementation</strong> (expert opinion via Delphi) and <strong>Analysis</strong>.">Model geliştirme süreci <strong>Hazırlık</strong> (kaynak incelemesi, sistematik tarama), <strong>Uygulama</strong> (Delphi ile uzman görüşü) ve <strong>Analiz</strong> aşamalarından oluşur.</p></div>
+    <div class="mblock"><h4 data-en="Delphi Technique">Delphi Tekniği</h4><p data-en="To identify digital risks in the educational setting, opinions are gathered from 10–15 experts; responses are coded with NVivo and the process is repeated at least 3 rounds until consensus (interquartile range ≤1, participation ≥90%, median ≥4).">Eğitim ortamındaki dijital riskleri belirlemek için 10–15 uzmandan görüş alınır; görüşler NVivo ile kodlanır, uzlaşma sağlanana dek süreç en az 3 tur tekrarlanır (çeyrekler genişliği ≤1, katılım ≥%90, medyan ≥4).</p></div>
+    <div class="mblock"><h4 data-en="Measurement Tools (DRIF &amp; DRSS)">Ölçme Araçları (DDBGF &amp; DDÖÖ)</h4><p data-en="The interview form and the 5-point Likert self-efficacy scale are structured according to the ANKA steps. Content validity uses CVI ≥ .80, reliability uses Cronbach's Alpha ≥ .70; construct validity uses EFA/CFA.">Görüşme formu ve 5'li Likert özyeterlik ölçeği ANKA basamaklarına göre yapılandırılır. Kapsam geçerliği için CVI ≥ .80, güvenirlik için Cronbach's Alpha ≥ .70 ölçütleri esas alınır; yapı geçerliği için AFA/DFA yapılır.</p></div>
 
-    <div class="subhead">RTDS Geliştirme — ADDIE Modeli</div>
+    <div class="subhead" data-en="RBSS Development — ADDIE Model">RTDS Geliştirme — ADDIE Modeli</div>
     <div class="addie">
-      <div class="a"><b>Analiz</b><span>İhtiyaç analizi, literatür, nitel görüşmeler.</span></div>
-      <div class="a"><b>Tasarım</b><span>Senaryo tabanlı modüllerin tasarımı.</span></div>
-      <div class="a"><b>Geliştirme</b><span>Moodle'da modül geliştirme.</span></div>
-      <div class="a"><b>Uygulama</b><span>Pilot uygulama ve geri bildirim.</span></div>
-      <div class="a"><b>Değerlendirme</b><span>Kullanılabilirlik analizi, görüşmeler.</span></div>
+      <div class="a"><b data-en="Analysis">Analiz</b><span data-en="Needs analysis, literature, qualitative interviews.">İhtiyaç analizi, literatür, nitel görüşmeler.</span></div>
+      <div class="a"><b data-en="Design">Tasarım</b><span data-en="Design of scenario-based modules.">Senaryo tabanlı modüllerin tasarımı.</span></div>
+      <div class="a"><b data-en="Development">Geliştirme</b><span data-en="Module development on Moodle.">Moodle'da modül geliştirme.</span></div>
+      <div class="a"><b data-en="Implementation">Uygulama</b><span data-en="Pilot implementation and feedback.">Pilot uygulama ve geri bildirim.</span></div>
+      <div class="a"><b data-en="Evaluation">Değerlendirme</b><span data-en="Usability analysis, interviews.">Kullanılabilirlik analizi, görüşmeler.</span></div>
     </div>
 
-    <div class="mblock" style="margin-top:30px"><h4>Etkililiğin Değerlendirilmesi</h4><p>Tek grup ön test–son test deseniyle, daha önce eğitim almamış 120 sınıf öğretmeniyle çalışılır. Her grupta 30 kişi olacak şekilde 4 grup, Moodle üzerinden 4 hafta çevrimiçi eğitim alır; son hafta 2 günlük çevrimiçi workshoplarla ders entegrasyonu çalışılır. Ön–son test farkı için bağımlı gruplar t-testi / Wilcoxon kullanılır.</p></div>
+    <div class="mblock" style="margin-top:30px"><h4 data-en="Evaluating Effectiveness">Etkililiğin Değerlendirilmesi</h4><p data-en="Using a one-group pretest–posttest design, the study works with 120 primary school teachers who have not previously received such training. In four groups of 30, they take 4 weeks of online training via Moodle; in the final week, 2-day online workshops address curriculum integration. The pretest–posttest difference is analysed with a dependent-samples t-test / Wilcoxon.">Tek grup ön test–son test deseniyle, daha önce eğitim almamış 120 sınıf öğretmeniyle çalışılır. Her grupta 30 kişi olacak şekilde 4 grup, Moodle üzerinden 4 hafta çevrimiçi eğitim alır; son hafta 2 günlük çevrimiçi workshoplarla ders entegrasyonu çalışılır. Ön–son test farkı için bağımlı gruplar t-testi / Wilcoxon kullanılır.</p></div>
   </div>
 </section>
 
 <!-- İŞ PAKETLERİ -->
 <section class="page section" id="ispaketleri">
   <div class="wrap">
-    <div class="section-head"><span class="eyebrow">Yol Haritası</span><h2>İş Paketleri</h2><p>Proje, birbirini izleyen beş iş paketi üzerinden yürütülür. Her paketin hedefi, görevleri, başarı ölçütü ve ara çıktıları aşağıdadır.</p></div>
+    <div class="section-head"><span class="eyebrow" data-en="Roadmap">Yol Haritası</span><h2 data-en="Work Packages">İş Paketleri</h2><p data-en="The project is carried out through five consecutive work packages. Each package's objective, tasks, success criterion and intermediate outputs are below.">Proje, birbirini izleyen beş iş paketi üzerinden yürütülür. Her paketin hedefi, görevleri, başarı ölçütü ve ara çıktıları aşağıdadır.</p></div>
 
     <div class="wpd">
-      <div class="wpd-head"><span class="wpd-id">İP 1</span><h3>Dijital Dayanıklılık Modelinin (DDM) Geliştirilmesi</h3><div class="wpd-tags"><span>Ay 1–5</span><span>%30</span></div></div>
+      <div class="wpd-head"><span class="wpd-id">İP 1</span><h3 data-en="Development of the Digital Resilience Model (DRM)">Dijital Dayanıklılık Modelinin (DDM) Geliştirilmesi</h3><div class="wpd-tags"><span data-en="Month 1–5">Ay 1–5</span><span>%30</span></div></div>
       <div class="wpd-body">
-        <div><h4>Hedef</h4><p>Öğretmenlerin dijital riskler karşısındaki güçlü ve zayıf yönlerini belirleyerek, güvenli, esnek ve verimli çalışma becerileri kazandırmak.</p></div>
-        <div><h4>Yapılacak İşler</h4><ul><li>Literatür ve çerçevelerin incelenmesi (NIST/CIS, DigiComp 2.2)</li><li>Görüşme yöntemiyle veri toplama</li><li>Delphi yöntemiyle uzman görüşü alma</li><li>DDM çerçevesinin geliştirilmesi</li></ul></div>
-        <div class="full crit"><h4>Başarı Ölçütü & Ara Çıktılar</h4><ul><li>5 ay içinde DDM'nin %90'ının tamamlanması</li><li>Sistematik tarama makalesi, DDM taslağı, uzman görüşleri raporu, bildiri, DDM risk raporu</li></ul></div>
+        <div><h4 data-en="Objective">Hedef</h4><p data-en="Identify teachers' strengths and weaknesses against digital risks and equip them with secure, flexible and productive working skills.">Öğretmenlerin dijital riskler karşısındaki güçlü ve zayıf yönlerini belirleyerek, güvenli, esnek ve verimli çalışma becerileri kazandırmak.</p></div>
+        <div><h4 data-en="Tasks">Yapılacak İşler</h4><ul><li data-en="Reviewing literature and frameworks (NIST/CIS, DigiComp 2.2)">Literatür ve çerçevelerin incelenmesi (NIST/CIS, DigiComp 2.2)</li><li data-en="Data collection via interviews">Görüşme yöntemiyle veri toplama</li><li data-en="Gathering expert opinion via Delphi">Delphi yöntemiyle uzman görüşü alma</li><li data-en="Developing the DRM framework">DDM çerçevesinin geliştirilmesi</li></ul></div>
+        <div class="full crit"><h4 data-en="Success Criterion &amp; Intermediate Outputs">Başarı Ölçütü &amp; Ara Çıktılar</h4><ul><li data-en="Completion of 90% of the DRM within 5 months">5 ay içinde DDM'nin %90'ının tamamlanması</li><li data-en="Systematic review article, DRM draft, expert opinion report, conference paper, DRM risk report">Sistematik tarama makalesi, DDM taslağı, uzman görüşleri raporu, bildiri, DDM risk raporu</li></ul></div>
       </div>
     </div>
 
     <div class="wpd">
-      <div class="wpd-head"><span class="wpd-id">İP 2</span><h3>Veri Toplama Araçlarının Geliştirilmesi</h3><div class="wpd-tags"><span>Ay 6–12</span><span>%10</span></div></div>
+      <div class="wpd-head"><span class="wpd-id">İP 2</span><h3 data-en="Development of Data Collection Tools">Veri Toplama Araçlarının Geliştirilmesi</h3><div class="wpd-tags"><span data-en="Month 6–12">Ay 6–12</span><span>%10</span></div></div>
       <div class="wpd-body">
-        <div><h4>Hedef</h4><p>Araştırma hedeflerinin gerçekleşme durumunu test etmek için geçerli ve güvenilir veri toplama araçları geliştirmek.</p></div>
-        <div><h4>Yapılacak İşler</h4><ul><li>Dijital Dayanıklılık Belirleme Görüşme Formu (DDBGF)</li><li>Dijital Dayanıklılık Öz-Yeterlik Ölçeği (DDÖÖ)</li></ul></div>
-        <div class="full crit"><h4>Başarı Ölçütü & Ara Çıktılar</h4><ul><li>Geliştirme sürecinde en az 1000 kişiye ulaşmak; araçların geçerli ve güvenilir olması</li><li>DDBGF, DDÖÖ ve ölçme araçlarının geliştirilmesini içeren makale</li></ul></div>
+        <div><h4 data-en="Objective">Hedef</h4><p data-en="Develop valid and reliable data collection tools to test whether the research objectives are met.">Araştırma hedeflerinin gerçekleşme durumunu test etmek için geçerli ve güvenilir veri toplama araçları geliştirmek.</p></div>
+        <div><h4 data-en="Tasks">Yapılacak İşler</h4><ul><li data-en="Digital Resilience Identification Interview Form (DRIF)">Dijital Dayanıklılık Belirleme Görüşme Formu (DDBGF)</li><li data-en="Digital Resilience Self-Efficacy Scale (DRSS)">Dijital Dayanıklılık Öz-Yeterlik Ölçeği (DDÖÖ)</li></ul></div>
+        <div class="full crit"><h4 data-en="Success Criterion &amp; Intermediate Outputs">Başarı Ölçütü &amp; Ara Çıktılar</h4><ul><li data-en="Reaching at least 1000 people during development; the tools being valid and reliable">Geliştirme sürecinde en az 1000 kişiye ulaşmak; araçların geçerli ve güvenilir olması</li><li data-en="An article covering the development of DRIF, DRSS and the measurement tools">DDBGF, DDÖÖ ve ölçme araçlarının geliştirilmesini içeren makale</li></ul></div>
       </div>
     </div>
 
     <div class="wpd">
-      <div class="wpd-head"><span class="wpd-id">İP 3</span><h3>Mevcut Durum Analizi</h3><div class="wpd-tags"><span>Ay 13–18</span><span>%10</span></div></div>
+      <div class="wpd-head"><span class="wpd-id">İP 3</span><h3 data-en="Current-State Analysis">Mevcut Durum Analizi</h3><div class="wpd-tags"><span data-en="Month 13–18">Ay 13–18</span><span>%10</span></div></div>
       <div class="wpd-body">
-        <div><h4>Hedef</h4><p>Sınıf öğretmenlerinin dijital dayanıklılık ve özyeterlik düzeylerini tespit ederek mevcut durumu ortaya koymak.</p></div>
-        <div><h4>Yapılacak İşler</h4><ul><li>Çevrimiçi formların hazırlanması</li><li>Çalışma grubunun belirlenmesi</li><li>Araçların çevrimiçi uygulanması</li><li>Analiz ve eğitim ihtiyaçlarının belirlenmesi</li></ul></div>
-        <div class="full crit"><h4>Başarı Ölçütü & Ara Çıktılar</h4><ul><li>En az 2000 sınıf öğretmeninin durumunu belirlemiş olmak</li><li>Dayanıklılık ve özyeterlik için eğitim ihtiyacı raporları</li></ul></div>
+        <div><h4 data-en="Objective">Hedef</h4><p data-en="Determine primary school teachers' digital resilience and self-efficacy levels to reveal the current state.">Sınıf öğretmenlerinin dijital dayanıklılık ve özyeterlik düzeylerini tespit ederek mevcut durumu ortaya koymak.</p></div>
+        <div><h4 data-en="Tasks">Yapılacak İşler</h4><ul><li data-en="Preparing online forms">Çevrimiçi formların hazırlanması</li><li data-en="Determining the study group">Çalışma grubunun belirlenmesi</li><li data-en="Online administration of the tools">Araçların çevrimiçi uygulanması</li><li data-en="Analysis and identification of training needs">Analiz ve eğitim ihtiyaçlarının belirlenmesi</li></ul></div>
+        <div class="full crit"><h4 data-en="Success Criterion &amp; Intermediate Outputs">Başarı Ölçütü &amp; Ara Çıktılar</h4><ul><li data-en="Determining the status of at least 2000 primary school teachers">En az 2000 sınıf öğretmeninin durumunu belirlemiş olmak</li><li data-en="Training-needs reports for resilience and self-efficacy">Dayanıklılık ve özyeterlik için eğitim ihtiyacı raporları</li></ul></div>
       </div>
     </div>
 
     <div class="wpd">
-      <div class="wpd-head"><span class="wpd-id">İP 4</span><h3>Risk Temelli Destek Sisteminin (RTDS) Geliştirilmesi</h3><div class="wpd-tags"><span>Ay 19–26</span><span>%25</span></div></div>
+      <div class="wpd-head"><span class="wpd-id">İP 4</span><h3 data-en="Development of the Risk-Based Support System (RBSS)">Risk Temelli Destek Sisteminin (RTDS) Geliştirilmesi</h3><div class="wpd-tags"><span data-en="Month 19–26">Ay 19–26</span><span>%25</span></div></div>
       <div class="wpd-body">
-        <div><h4>Hedef</h4><p>Öğretmenlerin dijital risklere karşı direnç kazanmalarını sağlayacak destek sistemini geliştirmek.</p></div>
-        <div><h4>Yapılacak İşler</h4><ul><li>İhtiyaç analizi</li><li>Senaryo tabanlı modül tasarımı</li><li>Moodle'da modül geliştirme</li><li>Pilot uygulama ve değerlendirme</li></ul></div>
-        <div class="full crit"><h4>Başarı Ölçütü & Ara Çıktılar</h4><ul><li>RTDS'nin en fazla %1 kayıpla tamamlanması; pilot geri bildirimlerinin olumlu olması</li><li>İhtiyaç analizi sonuçları; RTDS içerikleri, senaryoları ve materyalleri</li></ul></div>
+        <div><h4 data-en="Objective">Hedef</h4><p data-en="Develop a support system that helps teachers gain resilience against digital risks.">Öğretmenlerin dijital risklere karşı direnç kazanmalarını sağlayacak destek sistemini geliştirmek.</p></div>
+        <div><h4 data-en="Tasks">Yapılacak İşler</h4><ul><li data-en="Needs analysis">İhtiyaç analizi</li><li data-en="Scenario-based module design">Senaryo tabanlı modül tasarımı</li><li data-en="Module development on Moodle">Moodle'da modül geliştirme</li><li data-en="Pilot implementation and evaluation">Pilot uygulama ve değerlendirme</li></ul></div>
+        <div class="full crit"><h4 data-en="Success Criterion &amp; Intermediate Outputs">Başarı Ölçütü &amp; Ara Çıktılar</h4><ul><li data-en="Completion of the RBSS with at most 1% loss; positive pilot feedback">RTDS'nin en fazla %1 kayıpla tamamlanması; pilot geri bildirimlerinin olumlu olması</li><li data-en="Needs analysis results; RBSS contents, scenarios and materials">İhtiyaç analizi sonuçları; RTDS içerikleri, senaryoları ve materyalleri</li></ul></div>
       </div>
     </div>
 
     <div class="wpd">
-      <div class="wpd-head"><span class="wpd-id">İP 5</span><h3>Risk Temelli Destek Sisteminin (RTDS) Değerlendirilmesi</h3><div class="wpd-tags"><span>Ay 27–32</span><span>%25</span></div></div>
+      <div class="wpd-head"><span class="wpd-id">İP 5</span><h3 data-en="Evaluation of the Risk-Based Support System (RBSS)">Risk Temelli Destek Sisteminin (RTDS) Değerlendirilmesi</h3><div class="wpd-tags"><span data-en="Month 27–32">Ay 27–32</span><span>%25</span></div></div>
       <div class="wpd-body">
-        <div><h4>Hedef</h4><p>Risk temelli öğretmen destek sisteminin etkililiğini değerlendirmek.</p></div>
-        <div><h4>Yapılacak İşler</h4><ul><li>Çevrimiçi eğitimlerin düzenlenmesi</li><li>Workshopların düzenlenmesi</li><li>Ön test–son test değerlendirmeleri</li></ul></div>
-        <div class="full crit"><h4>Başarı Ölçütü</h4><ul><li>Dayanıklılık ve güvenlik becerilerinde istatistiksel olarak anlamlı gelişim (p&lt;.05)</li><li>Workshop ders planlarının niteliği; eğitim programının etkililiğinin kanıtlanması</li></ul></div>
+        <div><h4 data-en="Objective">Hedef</h4><p data-en="Evaluate the effectiveness of the risk-based teacher support system.">Risk temelli öğretmen destek sisteminin etkililiğini değerlendirmek.</p></div>
+        <div><h4 data-en="Tasks">Yapılacak İşler</h4><ul><li data-en="Holding online trainings">Çevrimiçi eğitimlerin düzenlenmesi</li><li data-en="Holding workshops">Workshopların düzenlenmesi</li><li data-en="Pretest–posttest evaluations">Ön test–son test değerlendirmeleri</li></ul></div>
+        <div class="full crit"><h4 data-en="Success Criterion">Başarı Ölçütü</h4><ul><li data-en="Statistically significant improvement in resilience and security skills (p&lt;.05)">Dayanıklılık ve güvenlik becerilerinde istatistiksel olarak anlamlı gelişim (p&lt;.05)</li><li data-en="Quality of workshop lesson plans; demonstrated effectiveness of the training programme">Workshop ders planlarının niteliği; eğitim programının etkililiğinin kanıtlanması</li></ul></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- EKİP (tek sayfa, gruplu) -->
+<!-- EKİP -->
 <section class="page section" id="ekip">
   <div class="wrap">
-    <div class="section-head"><span class="eyebrow">Ekip ve Görevliler</span><h2>Ekip</h2><p>Farklı üniversiteler, kamu ve özel sektörden uzmanlar projeyi yürütür. Görev bilgileri başvuru formundaki iş-zaman çizelgesine göredir; kurum bilgileri eklenecektir.</p></div>
+    <div class="section-head"><span class="eyebrow" data-en="Team">Ekip ve Görevliler</span><h2 data-en="Team">Ekip</h2><p data-en="Experts from various universities, the public sector and the private sector run the project. Role information follows the work–time schedule in the application form; institution information will be added.">Farklı üniversiteler, kamu ve özel sektörden uzmanlar projeyi yürütür. Görev bilgileri başvuru formundaki iş-zaman çizelgesine göredir; kurum bilgileri eklenecektir.</p></div>
 
-    <div class="subhead">Proje Yürütücüsü</div>
+    <div class="subhead" data-en="Project Coordinator">Proje Yürütücüsü</div>
     <div class="members" id="ekip-yurutucu">
       <div class="member"><div class="av">Aİ</div><div><div class="nm">Doç. Dr. Aslıhan İstanbullu</div><div class="ttl">Proje Yürütücüsü</div><div class="inst">Amasya Üniversitesi</div><div class="role">Görevli: İP1 · İP2 · İP3 · İP4 · İP5</div></div></div>
     </div>
 
-    <div class="subhead">Danışmanlar</div>
+    <div class="subhead" data-en="Advisors">Danışmanlar</div>
     <div class="members" id="ekip-danisman">
       <div class="member"><div class="av">MH</div><div><div class="nm">Prof. Dr. Mehmet Barış Horzum</div><div class="ttl">Danışman</div><div class="inst placeholder">Kurum eklenecek</div><div class="role">Görevli: İP1 · İP2</div></div></div>
       <div class="member"><div class="av">ÖD</div><div><div class="nm">Prof. Dr. Ömer Delialioğlu</div><div class="ttl">Danışman</div><div class="inst placeholder">Kurum eklenecek</div><div class="role">Görevli: İP1 · İP5</div></div></div>
@@ -483,7 +482,7 @@
       <div class="member"><div class="av">TB</div><div><div class="nm">Tufan Babur</div><div class="ttl">Danışman</div><div class="inst placeholder">Kurum eklenecek</div><div class="role">Görevli: İP1 · İP4</div></div></div>
     </div>
 
-    <div class="subhead">Araştırmacılar</div>
+    <div class="subhead" data-en="Researchers">Araştırmacılar</div>
     <div class="members" id="ekip-arastirmaci">
       <div class="member"><div class="av">ÇU</div><div><div class="nm">Prof. Dr. Çelebi Uluyol</div><div class="ttl">Araştırmacı</div><div class="inst placeholder">Kurum eklenecek</div><div class="role">Görevli: İP1 · İP4 · İP5</div></div></div>
       <div class="member"><div class="av">MT</div><div><div class="nm">Doç. Dr. Murat Topal</div><div class="ttl">Araştırmacı</div><div class="inst placeholder">Kurum eklenecek</div><div class="role">Görevli: İP1 · İP2 · İP4 · İP5</div></div></div>
@@ -494,7 +493,7 @@
       <div class="member"><div class="av">YE</div><div><div class="nm">Dr. Yucan Eke</div><div class="ttl">Araştırmacı</div><div class="inst placeholder">Kurum eklenecek</div><div class="role">Görevli: İP2</div></div></div>
     </div>
 
-    <div class="subhead">Bursiyerler</div>
+    <div class="subhead" data-en="Scholars (Grant Holders)">Bursiyerler</div>
     <div class="members compact" id="ekip-bursiyer">
       <div class="member"><div class="av">+</div><div><div class="nm">Lisans Bursiyer(ler)i</div><div class="ttl">TÜBİTAK 2209 · veri analizi & geliştirme</div></div></div>
       <div class="member"><div class="av">+</div><div><div class="nm">Yüksek Lisans Bursiyeri</div><div class="ttl">Tez çalışması</div></div></div>
@@ -506,7 +505,7 @@
 <!-- YAYINLAR -->
 <section class="page section" id="yayinlar">
   <div class="wrap">
-    <div class="section-head"><span class="eyebrow">Çıktılar</span><h2>Yayınlar ve Çıktılar</h2><p>Başvuru formunda öngörülen bilimsel çıktılar ve tahmini zaman aralıkları. Yayımlandıkça güncellenecektir.</p></div>
+    <div class="section-head"><span class="eyebrow" data-en="Outputs">Çıktılar</span><h2 data-en="Publications and Outputs">Yayınlar ve Çıktılar</h2><p data-en="Scientific outputs foreseen in the application form and their estimated time ranges. Updated as they are published.">Başvuru formunda öngörülen bilimsel çıktılar ve tahmini zaman aralıkları. Yayımlandıkça güncellenecektir.</p></div>
     <div class="cards" id="yayinlar-liste">
       <div class="card"><span class="kind">Sistematik Tarama</span><h3>Eğitimde dijital riskler üzerine sistematik derleme</h3><p>Literatür taramasından üretilecek derleme makalesi.</p><span class="when">6–12. ay</span></div>
       <div class="card"><span class="kind">Bildiri</span><h3>Uzman görüşleri ve DDM</h3><p>Delphi süreci sonuçlarının bildiri olarak sunulması.</p><span class="when">6–12. ay</span></div>
@@ -521,7 +520,7 @@
 <!-- ETKİNLİKLER -->
 <section class="page section" id="etkinlikler">
   <div class="wrap">
-    <div class="section-head"><span class="eyebrow">Çıktılar</span><h2>Süreç ve Etkinlikler</h2><p>Projenin ilerleyişi ve tamamlanan adımlar. Bu bölüm proje boyunca güncellenecektir.</p></div>
+    <div class="section-head"><span class="eyebrow" data-en="Outputs">Çıktılar</span><h2 data-en="Process and Activities">Süreç ve Etkinlikler</h2><p data-en="The project's progress and completed steps. This section is updated throughout the project.">Projenin ilerleyişi ve tamamlanan adımlar. Bu bölüm proje boyunca güncellenecektir.</p></div>
     <div class="tl" id="etkinlik-liste">
       <div class="tl-item done"><span class="when">Ön Çalışma</span><h3>Saha araştırması tamamlandı</h3><p>NIST çerçevesine dayalı görüşme formu, etik kurul ve MEB izinleriyle 1052 öğretmene uygulandı; NVivo analizi her basamakta önemli bilgi eksiklikleri olduğunu ortaya koydu.</p></div>
       <div class="tl-item done"><span class="when">Ön Çalışma</span><h3>Eğitim içeriklerinin incelenmesi</h3><p>MEB, BTK, TÜBİTAK gibi kurumların 90 eğitim içeriği tarandı; bu eğitimlerin projedeki dört kavramı bir arada içermediği görüldü.</p></div>
@@ -534,8 +533,8 @@
 <!-- DUYURULAR -->
 <section class="page section" id="duyurular">
   <div class="wrap">
-    <div class="section-head"><span class="eyebrow">Duyurular</span><h2>Duyurular</h2><p>Proje ile ilgili güncel haber ve duyurular.</p></div>
-    <div id="duyurular-liste" class="cards"><p class="placeholder">Yükleniyor…</p></div>
+    <div class="section-head"><span class="eyebrow" data-en="Announcements">Duyurular</span><h2 data-en="Announcements">Duyurular</h2><p data-en="Latest news and announcements about the project.">Proje ile ilgili güncel haber ve duyurular.</p></div>
+    <div id="duyurular-liste" class="cards"><p class="placeholder">…</p></div>
     <div id="duyurular-detay"></div>
   </div>
 </section>
@@ -543,8 +542,8 @@
 <!-- YAZILAR -->
 <section class="page section" id="yazilar">
   <div class="wrap">
-    <div class="section-head"><span class="eyebrow">Duyurular</span><h2>Yazılar</h2><p>Öğretmenlere ve velilere yönelik kısa, anlaşılır bilgilendirme yazıları.</p></div>
-    <div id="yazilar-liste" class="cards"><p class="placeholder">Yükleniyor…</p></div>
+    <div class="section-head"><span class="eyebrow" data-en="Announcements">Duyurular</span><h2 data-en="Articles">Yazılar</h2><p data-en="Short, clear informational articles for teachers and parents.">Öğretmenlere ve velilere yönelik kısa, anlaşılır bilgilendirme yazıları.</p></div>
+    <div id="yazilar-liste" class="cards"><p class="placeholder">…</p></div>
     <div id="yazilar-detay"></div>
   </div>
 </section>
@@ -552,19 +551,19 @@
 <!-- İLETİŞİM -->
 <section class="page section" id="iletisim">
   <div class="wrap">
-    <div class="section-head"><span class="eyebrow">İletişim</span><h2>Bize Ulaşın</h2><p>Proje, iş birliği veya eğitim talepleriniz için bizimle iletişime geçebilirsiniz.</p></div>
+    <div class="section-head"><span class="eyebrow" data-en="Contact">İletişim</span><h2 data-en="Get in Touch">Bize Ulaşın</h2><p data-en="You can contact us for the project, collaboration or training requests.">Proje, iş birliği veya eğitim talepleriniz için bizimle iletişime geçebilirsiniz.</p></div>
     <div class="contact-grid">
       <div>
-        <div class="field"><label>Ad Soyad</label><input type="text" placeholder="Adınız ve soyadınız"></div>
+        <div class="field"><label data-en="Full Name">Ad Soyad</label><input type="text" placeholder="..."></div>
         <div class="field"><label>E-posta</label><input type="email" placeholder="ornek@eposta.com"></div>
-        <div class="field"><label>Mesajınız</label><textarea rows="5" placeholder="Mesajınızı yazın..."></textarea></div>
-        <button class="btn btn-primary" type="button">Gönder →</button>
-        <p style="font-size:.78rem;margin-top:12px;color:var(--muted)">Form, yayına alınırken Formspree/Netlify Forms ile bağlanacaktır.</p>
+        <div class="field"><label data-en="Your Message">Mesajınız</label><textarea rows="5" placeholder="..."></textarea></div>
+        <button class="btn btn-primary" type="button" data-en="Send →">Gönder →</button>
+        <p style="font-size:.78rem;margin-top:12px;color:var(--muted)" data-en="The form will be connected to Formspree/Netlify Forms when published.">Form, yayına alınırken Formspree/Netlify Forms ile bağlanacaktır.</p>
       </div>
       <div class="contact-info">
-        <div class="ci"><div class="ic">@</div><div><div class="nm">E-posta</div><div class="vl placeholder" id="il-eposta">Eklenecek</div></div></div>
-        <div class="ci"><div class="ic">⌂</div><div><div class="nm">Posta Adresi</div><div class="vl" id="il-adres">Amasya Üniversitesi, Eğitim Fakültesi <span class="placeholder">(tam adres eklenecek)</span></div></div></div>
-        <div class="ci"><div class="ic">☎</div><div><div class="nm">Telefon</div><div class="vl placeholder" id="il-telefon">Eklenecek</div></div></div>
+        <div class="ci"><div class="ic">@</div><div><div class="nm">E-posta</div><div class="vl placeholder" id="il-eposta" data-en="To be added">Eklenecek</div></div></div>
+        <div class="ci"><div class="ic">⌂</div><div><div class="nm" data-en="Postal Address">Posta Adresi</div><div class="vl" id="il-adres">Amasya Üniversitesi, Eğitim Fakültesi <span class="placeholder" data-en="(full address to be added)">(tam adres eklenecek)</span></div></div></div>
+        <div class="ci"><div class="ic">☎</div><div><div class="nm" data-en="Phone">Telefon</div><div class="vl placeholder" id="il-telefon" data-en="To be added">Eklenecek</div></div></div>
       </div>
     </div>
   </div>
@@ -577,21 +576,21 @@
     <div class="foot-grid">
       <div>
         <span class="foot-badge">TÜBİTAK · 1001</span>
-        <div class="foot-title">Sınıf Öğretmenlerinin Dijital Dayanıklılık ve Dijital Dayanıklılık Özyeterliklerini Güçlendirmek</div>
+        <div class="foot-title" data-en="Strengthening Primary School Teachers' Digital Resilience and Digital Resilience Self-Efficacy">Sınıf Öğretmenlerinin Dijital Dayanıklılık ve Dijital Dayanıklılık Özyeterliklerini Güçlendirmek</div>
       </div>
       <div class="foot-col">
-        <h4>İletişim</h4>
-        <div class="lbl">Proje Yürütücüsü</div><div class="val">Doç. Dr. Aslıhan İstanbullu</div>
-        <div class="lbl">Posta Adresi</div><div class="val" id="foot-adres">Amasya Üniversitesi — Eğitim Fakültesi</div>
-        <div class="lbl">E-Posta</div><div class="val placeholder" id="foot-eposta">Eklenecek</div>
+        <h4 data-en="Contact">İletişim</h4>
+        <div class="lbl" data-en="Project Coordinator">Proje Yürütücüsü</div><div class="val">Doç. Dr. Aslıhan İstanbullu</div>
+        <div class="lbl" data-en="Postal Address">Posta Adresi</div><div class="val" id="foot-adres">Amasya Üniversitesi — Eğitim Fakültesi</div>
+        <div class="lbl">E-Posta</div><div class="val placeholder" id="foot-eposta" data-en="To be added">Eklenecek</div>
       </div>
       <div class="foot-col">
-        <h4>Menü</h4>
-        <a class="val" data-go="hakkinda" style="display:block;padding:4px 0">Proje Hakkında</a>
-        <a class="val" data-go="ispaketleri" style="display:block;padding:4px 0">İş Paketleri</a>
-        <a class="val" data-go="ekip" style="display:block;padding:4px 0">Ekip</a>
-        <a class="val" data-go="yayinlar" style="display:block;padding:4px 0">Çıktılar & Duyurular</a>
-        <a class="val" data-go="iletisim" style="display:block;padding:4px 0">İletişim</a>
+        <h4 data-en="Menu">Menü</h4>
+        <a class="val" data-go="hakkinda" style="display:block;padding:4px 0" data-en="About">Proje Hakkında</a>
+        <a class="val" data-go="ispaketleri" style="display:block;padding:4px 0" data-en="Work Packages">İş Paketleri</a>
+        <a class="val" data-go="ekip" style="display:block;padding:4px 0" data-en="Team">Ekip</a>
+        <a class="val" data-go="yayinlar" style="display:block;padding:4px 0" data-en="Outputs &amp; News">Çıktılar & Duyurular</a>
+        <a class="val" data-go="iletisim" style="display:block;padding:4px 0" data-en="Contact">İletişim</a>
       </div>
     </div>
     <div class="foot-bottom"><span>© 2026 Dijital Dayanıklılık Projesi</span><span>TÜBİTAK 1001 · Amasya Üniversitesi</span></div>
@@ -599,6 +598,9 @@
 </footer>
 
 <script>
+  let lang = 'tr';
+  try{ const s=localStorage.getItem('lang'); if(s==='en'||s==='tr') lang=s; }catch(e){}
+
   const pages = document.querySelectorAll('.page');
   const menuLinks = document.querySelectorAll('.menu > li > a[data-go]');
   function showPage(id){
@@ -607,7 +609,7 @@
     target.classList.add('active');
     menuLinks.forEach(a=>a.classList.toggle('active', a.getAttribute('data-go')===id));
     window.scrollTo({top:0});
-    try{ if(location.hash.slice(1)!==id){ history.replaceState(null,'','#'+id); } }catch(e){ /* sandbox/srcdoc: adres güncellenemez, sorun değil */ }
+    try{ if(location.hash.slice(1)!==id){ history.replaceState(null,'','#'+id); } }catch(e){}
     document.getElementById('menu').classList.remove('open');
   }
   document.addEventListener('click', e=>{
@@ -615,9 +617,20 @@
     if(el){ e.preventDefault(); showPage(el.getAttribute('data-go')); }
   });
   window.addEventListener('hashchange', ()=>showPage(location.hash.slice(1)));
-  showPage(location.hash ? location.hash.slice(1) : 'anasayfa');
 
-  /* ---- CMS içerik yükleme (Duyurular & Yazılar) ---- */
+  /* ---- Dil anahtarı (TR/EN) ---- */
+  function applyLang(l){
+    lang = l;
+    document.documentElement.lang = l;
+    document.querySelectorAll('[data-en]').forEach(el=>{
+      if(el.dataset.tr===undefined) el.dataset.tr = el.innerHTML;
+      el.innerHTML = (l==='en') ? el.getAttribute('data-en') : el.dataset.tr;
+    });
+    document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('active', b.getAttribute('data-lang')===l));
+    try{ localStorage.setItem('lang', l); }catch(e){}
+    renderTumIcerik();
+  }
+
   function mdToHtml(md){
     if(!md) return '';
     if(window.marked){ try{ return window.marked.parse(md); }catch(e){} }
@@ -625,23 +638,26 @@
     return '<p>'+esc.replace(/\n{2,}/g,'</p><p>').replace(/\n/g,'<br>')+'</p>';
   }
   function escapeHtml(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+  function L(it,key){ return (lang==='en' && it[key+'_en']) ? it[key+'_en'] : (it[key]||''); }
 
   function renderColeksiyon(jsonYolu, anahtar, listeId, detayId){
     const liste = document.getElementById(listeId);
     const detay = document.getElementById(detayId);
+    if(!liste) return;
+    detay.innerHTML='';
     fetch(jsonYolu, {cache:'no-store'})
       .then(r=>{ if(!r.ok) throw new Error('yok'); return r.json(); })
       .then(data=>{
         const items = (data && data[anahtar]) ? data[anahtar].slice() : [];
-        if(!items.length){ liste.innerHTML = '<p class="placeholder">Henüz içerik eklenmedi.</p>'; return; }
+        if(!items.length){ liste.innerHTML = '<p class="placeholder">'+(lang==='en'?'No content yet.':'Henüz içerik eklenmedi.')+'</p>'; return; }
         const parse = t => { if(!t) return 0; const p=String(t).split(/[.\/-]/); return p.length===3 ? new Date(p[2],p[1]-1,p[0]).getTime() : Date.parse(t)||0; };
         items.sort((a,b)=>parse(b.tarih)-parse(a.tarih));
         liste.innerHTML = items.map((it,i)=>(
           '<div class="card" style="cursor:pointer" data-detay="'+i+'">'+
-            '<span class="kind">'+escapeHtml(it.etiket||'')+'</span>'+
-            '<h3>'+escapeHtml(it.baslik||'')+'</h3>'+
+            '<span class="kind">'+escapeHtml(L(it,'etiket'))+'</span>'+
+            '<h3>'+escapeHtml(L(it,'baslik'))+'</h3>'+
             (it.tarih?'<span class="when">'+escapeHtml(it.tarih)+'</span>':'')+
-            (it.ozet?'<p style="margin-top:10px">'+escapeHtml(it.ozet)+'</p>':'')+
+            (L(it,'ozet')?'<p style="margin-top:10px">'+escapeHtml(L(it,'ozet'))+'</p>':'')+
           '</div>'
         )).join('');
         liste.querySelectorAll('[data-detay]').forEach(card=>{
@@ -649,17 +665,19 @@
             const it = items[+card.getAttribute('data-detay')];
             detay.innerHTML = '<div style="margin-top:30px;border-top:1px solid var(--line);padding-top:26px">'+
               (it.tarih?'<span class="when">'+escapeHtml(it.tarih)+'</span>':'')+
-              '<h2 style="margin-top:10px">'+escapeHtml(it.baslik||'')+'</h2>'+
-              '<div class="prose" style="margin-top:14px">'+mdToHtml(it.icerik||it.ozet||'')+'</div>'+
+              '<h2 style="margin-top:10px">'+escapeHtml(L(it,'baslik'))+'</h2>'+
+              '<div class="prose" style="margin-top:14px">'+mdToHtml(L(it,'icerik')||L(it,'ozet'))+'</div>'+
             '</div>';
             detay.scrollIntoView({behavior:'smooth'});
           });
         });
       })
-      .catch(()=>{ liste.innerHTML = '<p class="placeholder">İçerikler yalnızca yayınlanmış (Netlify) sitede görünür.</p>'; });
+      .catch(()=>{ liste.innerHTML = '<p class="placeholder">'+(lang==='en'?'Content appears only on the published (Netlify) site.':'İçerikler yalnızca yayınlanmış (Netlify) sitede görünür.')+'</p>'; });
   }
-  renderColeksiyon('/_data/duyurular.json','duyurular','duyurular-liste','duyurular-detay');
-  renderColeksiyon('/_data/yazilar.json','yazilar','yazilar-liste','yazilar-detay');
+  function renderTumIcerik(){
+    renderColeksiyon('/_data/duyurular.json','duyurular','duyurular-liste','duyurular-detay');
+    renderColeksiyon('/_data/yazilar.json','yazilar','yazilar-liste','yazilar-detay');
+  }
 
   /* ---- Genel ayarlar (şu anki aşama + iletişim) ---- */
   fetch('/_data/site.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(s=>{
@@ -673,7 +691,7 @@
     set('foot-adres', s.iletisim_adres);
   }).catch(()=>{});
 
-  /* ---- Ekip (gruplara göre) ---- */
+  /* ---- Ekip ---- */
   function bashHarfler(ad){
     const atla=/^(prof\.?|do\u00e7\.?|dr\.?|\u00f6\u011fr\.?|g\u00f6r\.?|\u00fcyesi|m\u00fch\.?)$/i;
     const kelimeler=(ad||'').split(/\s+/).filter(k=>k && !atla.test(k.replace(/[().]/g,'')));
@@ -682,7 +700,7 @@
   function uyeKarti(u, compact){
     const av = compact ? '+' : bashHarfler(u.ad);
     const kurum = u.kurum ? '<div class="inst">'+escapeHtml(u.kurum)+'</div>'
-                          : '<div class="inst placeholder">Kurum eklenecek</div>';
+                          : '<div class="inst placeholder">'+(lang==='en'?'Institution to be added':'Kurum eklenecek')+'</div>';
     const gorev = (!compact && u.gorev) ? '<div class="role">'+escapeHtml(u.gorev)+'</div>' : '';
     const unvan = u.unvan ? '<div class="ttl">'+escapeHtml(u.unvan)+'</div>' : '';
     return '<div class="member"><div class="av">'+escapeHtml(av)+'</div><div>'+
@@ -701,7 +719,7 @@
     grupYaz('Bursiyer','ekip-bursiyer',true);
   }).catch(()=>{});
 
-  /* ---- Yayınlar ve Çıktılar ---- */
+  /* ---- Yayınlar ---- */
   fetch('/_data/yayinlar.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(d=>{
     if(!d || !d.yayinlar || !d.yayinlar.length) return;
     const el=document.getElementById('yayinlar-liste'); if(!el) return;
@@ -717,7 +735,7 @@
     }).join('');
   }).catch(()=>{});
 
-  /* ---- Etkinlikler (zaman çizelgesi) ---- */
+  /* ---- Etkinlikler ---- */
   fetch('/_data/etkinlikler.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(d=>{
     if(!d || !d.etkinlikler || !d.etkinlikler.length) return;
     const el=document.getElementById('etkinlik-liste'); if(!el) return;
@@ -730,14 +748,16 @@
     )).join('');
   }).catch(()=>{});
 
-  /* Netlify Identity: davet/şifre belirleme sonrası /admin'e yönlendirme */
+  /* Netlify Identity yönlendirmesi */
   if(window.netlifyIdentity){
     window.netlifyIdentity.on('init', user=>{
-      if(!user){
-        window.netlifyIdentity.on('login', ()=>{ document.location.href = '/admin/'; });
-      }
+      if(!user){ window.netlifyIdentity.on('login', ()=>{ document.location.href = '/admin/'; }); }
     });
   }
+
+  /* Başlat */
+  applyLang(lang);
+  showPage(location.hash ? location.hash.slice(1) : 'anasayfa');
 </script>
 </body>
 </html>
