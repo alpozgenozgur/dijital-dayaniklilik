@@ -536,7 +536,7 @@
 <section class="page section" id="yayinlar">
   <div class="wrap">
     <div class="section-head"><span class="eyebrow">Çıktılar</span><h2>Yayınlar ve Çıktılar</h2><p>Başvuru formunda öngörülen bilimsel çıktılar ve tahmini zaman aralıkları. Yayımlandıkça güncellenecektir.</p></div>
-    <div class="cards">
+    <div class="cards" id="yayinlar-liste">
       <div class="card"><span class="kind">Sistematik Tarama</span><h3>Eğitimde dijital riskler üzerine sistematik derleme</h3><p>Literatür taramasından üretilecek derleme makalesi.</p><span class="when">6–12. ay</span></div>
       <div class="card"><span class="kind">Bildiri</span><h3>Uzman görüşleri ve DDM</h3><p>Delphi süreci sonuçlarının bildiri olarak sunulması.</p><span class="when">6–12. ay</span></div>
       <div class="card"><span class="kind">Makale</span><h3>DDBGF & DDÖÖ geçerlik-güvenirlik</h3><p>Ölçme araçlarının geliştirilme süreci ve psikometrik bulgular.</p><span class="when">12–18. ay</span></div>
@@ -730,6 +730,22 @@
     grupYaz('Danışman','ekip-danisman',false);
     grupYaz('Araştırmacı','ekip-arastirmaci',false);
     grupYaz('Bursiyer','ekip-bursiyer',true);
+  }).catch(()=>{});
+
+  /* ---- Yayınlar ve Çıktılar ---- */
+  fetch('/_data/yayinlar.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(d=>{
+    if(!d || !d.yayinlar || !d.yayinlar.length) return;
+    const el=document.getElementById('yayinlar-liste'); if(!el) return;
+    el.innerHTML=d.yayinlar.map(y=>{
+      const durumCls = (y.durum && /yay[ıi]mland|tamamland/i.test(y.durum)) ? 'when' : 'soon';
+      const rozet = y.durum ? '<span class="'+durumCls+'">'+escapeHtml(y.durum)+'</span>' : '';
+      const baslikIc = '<span class="kind">'+escapeHtml(y.tur||'')+'</span>'+
+                       '<h3>'+escapeHtml(y.baslik||'')+'</h3>'+
+                       (y.aciklama?'<p>'+escapeHtml(y.aciklama)+'</p>':'')+rozet;
+      return y.baglanti
+        ? '<a class="card" href="'+escapeHtml(y.baglanti)+'" target="_blank" rel="noopener" style="display:block">'+baslikIc+'</a>'
+        : '<div class="card">'+baslikIc+'</div>';
+    }).join('');
   }).catch(()=>{});
 
   /* ---- Etkinlikler (zaman çizelgesi) ---- */
