@@ -5,13 +5,11 @@
       "tarih": "23.06.2026",
       "etiket": "Duyuru",
       "ozet": "Projenin tanıtım ve yaygınlaştırma sitesi yayına alındı.",
-      "icerik": "Projenin tanıtım ve yaygınlaştırma sitesi yayına alındı. Bu sayfadan proje duyurularını takip edebilirsiniz.\n\n*Bu örnek bir duyurudur; yönetim panelinden düzenlenebilir veya silinebilir.*"
-    },
-    {
-      "etiket": "Duyuru",
-      "baslik": "x",
-      "ozet": "xxx",
-      "icerik": "xx"
+      "icerik": "Projenin tanıtım ve yaygınlaştırma sitesi yayına alındı. Bu sayfadan proje duyurularını takip edebilirsiniz.\n\n*Bu örnek bir duyurudur; yönetim panelinden düzenlenebilir veya silinebilir.*",
+      "baslik_en": "Project website is live",
+      "etiket_en": "Announcement",
+      "ozet_en": "The project's promotion and dissemination website has gone live.",
+      "icerik_en": "The project's promotion and dissemination website has gone live. You can follow project announcements from this page.\n\n*This is a sample announcement; it can be edited or deleted from the admin panel.*"
     }
   ]
 }
