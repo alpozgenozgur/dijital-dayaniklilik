@@ -1,0 +1,10 @@
+{
+  "yayinlar": [
+    { "tur": "Sistematik Tarama", "baslik": "Eğitimde dijital riskler üzerine sistematik derleme", "aciklama": "Literatür taramasından üretilecek derleme makalesi.", "durum": "6–12. ay", "baglanti": "" },
+    { "tur": "Bildiri", "baslik": "Uzman görüşleri ve DDM", "aciklama": "Delphi süreci sonuçlarının bildiri olarak sunulması.", "durum": "6–12. ay", "baglanti": "" },
+    { "tur": "Makale", "baslik": "DDBGF & DDÖÖ geçerlik-güvenirlik", "aciklama": "Ölçme araçlarının geliştirilme süreci ve psikometrik bulgular.", "durum": "12–18. ay", "baglanti": "" },
+    { "tur": "Rapor", "baslik": "DDM risk raporu", "aciklama": "Eğitim ortamındaki dijital risklerin nihai listesi.", "durum": "18–24. ay", "baglanti": "" },
+    { "tur": "Makale", "baslik": "Mevcut durum analizi", "aciklama": "En az ulusal dizinde, saha bulgularına dayalı makale.", "durum": "Proje sürecinde", "baglanti": "" },
+    { "tur": "Araştırmacı Yetiştirme", "baslik": "2209, yüksek lisans ve doktora tezleri", "aciklama": "Proje kapsamında yetiştirilecek araştırmacılar.", "durum": "Proje sürecinde", "baglanti": "" }
+  ]
+}
