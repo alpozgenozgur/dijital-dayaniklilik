@@ -62,6 +62,26 @@ collections:
               - { label: "Başlık", name: "baslik", widget: "string" }
               - { label: "Açıklama", name: "aciklama", widget: "text", required: false }
 
+  - name: "yayinlar"
+    label: "Yayınlar ve Çıktılar"
+    description: "Bilimsel çıktılar ve yayınlar."
+    files:
+      - name: "yayinlar"
+        label: "Yayın Listesi"
+        file: "_data/yayinlar.json"
+        fields:
+          - label: "Yayınlar"
+            name: "yayinlar"
+            widget: "list"
+            label_singular: "Yayın"
+            summary: "{{fields.tur}} — {{fields.baslik}}"
+            fields:
+              - { label: "Tür", name: "tur", widget: "string", hint: "Örn: Makale, Bildiri, Rapor, Sistematik Tarama" }
+              - { label: "Başlık", name: "baslik", widget: "string" }
+              - { label: "Açıklama", name: "aciklama", widget: "text", required: false }
+              - { label: "Durum / Zaman", name: "durum", widget: "string", required: false, hint: "Örn: 6–12. ay, Planlandı, Yayımlandı" }
+              - { label: "Bağlantı (DOI/PDF)", name: "baglanti", widget: "string", required: false, hint: "Yayımlanınca link eklenebilir; boşsa kart tıklanmaz." }
+
   - name: "duyurular"
     label: "Duyurular"
     description: "Proje duyuruları. 'Duyurular' listesine yeni satır ekleyip kaydedin."
