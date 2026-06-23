@@ -6,6 +6,12 @@
       "etiket": "Duyuru",
       "ozet": "Projenin tanıtım ve yaygınlaştırma sitesi yayına alındı.",
       "icerik": "Projenin tanıtım ve yaygınlaştırma sitesi yayına alındı. Bu sayfadan proje duyurularını takip edebilirsiniz.\n\n*Bu örnek bir duyurudur; yönetim panelinden düzenlenebilir veya silinebilir.*"
+    },
+    {
+      "etiket": "Duyuru",
+      "baslik": "x",
+      "ozet": "xxx",
+      "icerik": "xx"
     }
   ]
 }
