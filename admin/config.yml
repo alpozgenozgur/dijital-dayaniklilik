@@ -1,0 +1,53 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Yüklenen görsellerin kaydedileceği klasör
+media_folder: "gorseller"
+public_folder: "/gorseller"
+
+locale: "tr"
+
+# Panel arayüzü Türkçe etiketlerle
+collections:
+  - name: "duyurular"
+    label: "Duyurular"
+    description: "Proje duyuruları. 'Duyurular' listesine yeni satır ekleyip kaydedin."
+    files:
+      - name: "duyurular"
+        label: "Duyuru Listesi"
+        file: "_data/duyurular.json"
+        description: "Yeni duyuru eklemek için listenin altındaki 'Duyuru ekle' düğmesine basın."
+        fields:
+          - label: "Duyurular"
+            name: "duyurular"
+            widget: "list"
+            label_singular: "Duyuru"
+            summary: "{{fields.tarih}} — {{fields.baslik}}"
+            fields:
+              - { label: "Başlık", name: "baslik", widget: "string" }
+              - { label: "Tarih", name: "tarih", widget: "date", format: "DD.MM.YYYY", date_format: "DD.MM.YYYY", time_format: false }
+              - { label: "Etiket", name: "etiket", widget: "string", required: false, default: "Duyuru", hint: "Örn: Duyuru, Etkinlik, Çalıştay" }
+              - { label: "Kısa Özet", name: "ozet", widget: "text", hint: "Kartta görünecek 1-2 cümle." }
+              - { label: "İçerik (detay)", name: "icerik", widget: "markdown", required: false, hint: "Tıklanınca açılacak tam metin. Boş bırakılırsa özet gösterilir." }
+
+  - name: "yazilar"
+    label: "Yazılar"
+    description: "Bilgilendirme yazıları. 'Yazılar' listesine yeni satır ekleyip kaydedin."
+    files:
+      - name: "yazilar"
+        label: "Yazı Listesi"
+        file: "_data/yazilar.json"
+        description: "Yeni yazı eklemek için listenin altındaki 'Yazı ekle' düğmesine basın."
+        fields:
+          - label: "Yazılar"
+            name: "yazilar"
+            widget: "list"
+            label_singular: "Yazı"
+            summary: "{{fields.tarih}} — {{fields.baslik}}"
+            fields:
+              - { label: "Başlık", name: "baslik", widget: "string" }
+              - { label: "Tarih", name: "tarih", widget: "date", format: "DD.MM.YYYY", date_format: "DD.MM.YYYY", time_format: false }
+              - { label: "Etiket", name: "etiket", widget: "string", required: false, default: "Yazı", hint: "Örn: Rehber, Bilgi Notu, Söyleşi" }
+              - { label: "Kısa Özet", name: "ozet", widget: "text" }
+              - { label: "İçerik (detay)", name: "icerik", widget: "markdown" }

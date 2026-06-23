@@ -1,0 +1,4 @@
+# Netlify yapılandırması — derleme (build) yok, dosyalar olduğu gibi yayınlanır.
+[build]
+  publish = "."
+  command = ""
